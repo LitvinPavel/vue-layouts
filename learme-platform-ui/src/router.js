@@ -10,27 +10,39 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: () => import('./components/Home.vue')
+      component: () => import('./layouts/home.vue')
     },
     {
-      path: '/sign-in',
-      name: 'sign-in',
-      component: () => import('./components/SignIn.vue')
+      path: '/form',
+      component: () => import('./layouts/layout_form.vue'),
+      children: [
+        {
+          path: 'sign-in',
+          name: 'sign-in',
+          component: () => import('./components/SignIn.vue')
+        },
+        {
+          path: 'sign-up',
+          name: 'sign-up',
+          component: () => import('./components/SignUp.vue')
+        },
+        {
+          path: 'recovery',
+          name: 'recovery',
+          component: () => import('./components/Recovery.vue')
+        },
+      ]
     },
     {
-      path: '/sign-up',
-      name: 'sign-up',
-      component: () => import('./components/SignUp.vue')
-    },
-    {
-      path: '/recovery',
-      name: 'recovery',
-      component: () => import('./components/Recovery.vue')
-    },
-    {
-      path: '/vebinar',
-      name: 'vebinar',
-      component: () => import('./components/Vebinar.vue')
+      path: '/product',
+      component: () => import('./layouts/layout_product.vue'),
+      children: [
+        {
+          path: 'vebinar',
+          name: 'vebinar',
+          component: () => import('./components/Vebinar.vue')
+        }
+      ]
     }
   ]
 })

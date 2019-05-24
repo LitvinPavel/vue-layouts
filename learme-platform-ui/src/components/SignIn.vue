@@ -2,7 +2,7 @@
       <el-row class="main-row">
         <div class="m-auto">
           <el-card class="signin-card">
-          <h1 class="h1">Вход</h1>
+          <div class="h3 text-center mb3">Вход</div>
           <el-form class="signin-form" :model="signin" ref="signin">
             <el-form-item>
               <el-input placeholder="Email" v-model="signin.email"></el-input>
@@ -19,26 +19,26 @@
             <el-col :span="8" class="divider-right">
               <div class="social-content">
                 <img :src="vkIcon" alt="vk"/>
-                <span class="secondary-text px-1">Вконтакте</span>
+                <span class="secondary-text px1">Вконтакте</span>
               </div>
             </el-col>
             <el-col :span="8" class="divider-right">
               <div class="social-content">
                 <img :src="fbIcon" alt="fb"/>
-                <span class="secondary-text px-1">Facebook</span>
+                <span class="secondary-text px1">Facebook</span>
               </div>
             </el-col>
             <el-col :span="8" >
               <div class="social-content">
                 <img :src="gooIcon" alt="google"/>
-                <span class="secondary-text px-1">Google</span>
+                <span class="secondary-text px1">Google</span>
               </div>
             </el-col>
           </el-row>
           
         </el-card>
-        <el-row class="mt-4">
-            <div class="line-height-21 text-center pb-1">
+        <el-row class="mt4">
+            <div class="line-height-21 text-center pb1">
               <span>Нет учетной записи в Learme? </span>
               <a class="link" href="">Зарегистрироваться</a>
             </div>

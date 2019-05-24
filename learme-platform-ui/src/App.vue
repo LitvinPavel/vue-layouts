@@ -1,29 +1,13 @@
 <template>
   <div id="app">
-      <el-container>
-  <el-header class="header divider-bottom" height="70px">
-    <Header></Header>
-  </el-header>
-  <el-main>
+
     <router-view></router-view>
-  </el-main>
-  <el-footer class="footer" height="auto">
-    <div class="secondary-text footer-content">
-      Размещено на Learme. &copy; Learme 2019, <a class="secondary-text" href="">Пользовательское соглашение</a>
-    </div>
-  </el-footer>
-</el-container>
-      
   </div>
 </template>
 
 <script>
-import Header from './components/Header.vue'
 export default {
-  name: 'app',
-  components: {
-    Header
-  }
+  name: 'app'
 }
 </script>
 
@@ -44,6 +28,11 @@ export default {
     text-align: center;
     color: #151515;
   }
+  .h2 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+  }
   input.el-input__inner {
     height: 50px;
   }
@@ -54,40 +43,6 @@ export default {
     font-weight: normal;
     font-size: 16px;
     line-height: 24px;
-  }
-  .mx-auto {
-    margin: 0 auto;
-  }
-  .m-auto {
-    margin: auto;
-  }
-  .px-1 {
-    padding-left: 8px;
-    padding-right: 8px;
-  }
-  .pl-1 {
-    padding-left: 8px;
-  }
-  .pl-2 {
-    padding-left: 16px;
-  }
-  .pb-1 {
-    padding-bottom: 8px;
-  }
-  .pb-2 {
-    padding-bottom: 16px;
-  }
-  .pb-3 {
-    padding-bottom: 24px;
-  }
-  .p-2 {
-    padding: 16px;
-  }
-  .mt-4 {
-    margin-top: 24px;
-  }
-  .mt-1 {
-    margin-top: 8px
   }
   .text-center {
     text-align: center;
@@ -135,6 +90,10 @@ export default {
       font-size: 24px;
       line-height: 32px;
     }
+    .h2 {
+      font-size: 16px;
+      line-height: 24px;
+    }
     .el-footer {
       padding: 0 !important;
     }
@@ -155,14 +114,15 @@ export default {
       font-size: 30px;
       line-height: 36px;
     }
+    .h2 {
+      font-size: 24px;
+      line-height: 32px;
+    }
     .el-footer {
       padding: 0 24px !important;
     }
     .footer-content {
       text-align: left;
-    }
-    .p-md-2 {
-      padding: 16px;
     }
   }
   @media (min-width: 1440px) {

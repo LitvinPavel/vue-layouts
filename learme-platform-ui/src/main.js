@@ -5,6 +5,8 @@ import './registerServiceWorker'
 import './plugins/element.js'
 import './assets/theme_styles/index.css'
 import 'element-ui/lib/theme-chalk/display.css';
+import './assets/css/spacing.css';
+import './assets/css/typographic.css';
 
 Vue.config.productionTip = false
 

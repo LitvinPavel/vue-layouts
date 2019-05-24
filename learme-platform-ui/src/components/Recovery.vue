@@ -2,7 +2,7 @@
       <el-row class="main-row">
         <div class="m-auto">
           <el-card class="recovery-card">
-          <h1 class="h1">Восстановление пароля</h1>
+          <div class="h3 text-center mb3">Восстановление пароля</div>
           <div class="pre-message text-center">
             Введите свой E-mail, и мы отправим вам ссылку для сброса вашего пароля:
           </div>

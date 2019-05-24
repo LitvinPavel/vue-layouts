@@ -2,7 +2,7 @@
       <el-row class="main-row">
         <div class="m-auto">
           <el-card class="signup-card">
-          <h1 class="h1">Регистрация</h1>
+          <div class="h3 text-center mb3">Регистрация</div>
           <div class="pre-message text-center">
             Чтобы начать использовать Learme пожалуйста зарегистрируйтесь или <a class="link" href="">авторизуйтесь</a> если у вас уже есть аккаунт в нашей системе:
           </div>
@@ -22,8 +22,9 @@
                 </el-select>
               </el-input>
             </el-form-item>
-            <el-row style="display: flex;" class="text-left pb-2">
-              <el-checkbox style="margin-right: 0; line-height: 21px;"></el-checkbox><div style="font-size: 14px; line-height: 21px; padding-left: 8px;">Принимаю пользовательское соглашение</div>
+            <el-row style="display: flex;" class="text-left pb2">
+              <el-checkbox style="margin-right: 0; line-height: 21px;"></el-checkbox>
+              <div style="font-size: 14px; line-height: 21px; padding-left: 8px;">Принимаю пользовательское соглашение</div>
             </el-row>
             <el-form-item >
               <el-row class="line-height-21">
@@ -36,24 +37,24 @@
               </el-row>
             </el-form-item>
           </el-form>
-          <div class="text-center pb-2 p-md-2">Зарегистрироваться с помощью</div>
+          <div class="text-center pb2 p-md-2">Зарегистрироваться с помощью</div>
           <el-row class="divider-top">
             <el-col :span="8" class="divider-right">
               <div class="social-content">
                 <img :src="vkIcon" alt="vk"/>
-                <span class="secondary-text px-1">Вконтакте</span>
+                <span class="secondary-text px1">Вконтакте</span>
               </div>
             </el-col>
             <el-col :span="8" class="divider-right">
               <div class="social-content">
                 <img :src="fbIcon" alt="fb"/>
-                <span class="secondary-text px-1">Facebook</span>
+                <span class="secondary-text px1">Facebook</span>
               </div>
             </el-col>
             <el-col :span="8" >
               <div class="social-content">
                 <img :src="gooIcon" alt="google"/>
-                <span class="secondary-text px-1">Google</span>
+                <span class="secondary-text px1">Google</span>
               </div>
             </el-col>
           </el-row>
