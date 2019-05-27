@@ -20,3 +20,11 @@ import Header from '../components/Header'
     components: { Header }
   }
 </script>
+
+<style>
+  @media (min-width: 1440px) {
+    .container {
+      padding: 80px 135px;
+    }
+  }
+</style>

@@ -10,6 +10,8 @@ import './assets/css/typographic.css';
 
 Vue.config.productionTip = false
 
+Vue.prototype.$isTChat = false
+
 new Vue({
     router,
     render: h => h(App)

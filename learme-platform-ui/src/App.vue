@@ -76,7 +76,9 @@ export default {
     background: #FFFFFF;
     width: 100%;
   }
-  
+  .bold {
+    font-weight: bold !important;
+  }
   .footer-content {
     border-top: 1px solid #E0E0E0;
     padding: 16px 0 32px 0;

@@ -4,19 +4,53 @@
     <Header></Header>
   </el-header>
   <el-main>
-    <el-row :gutter="20">
-  <el-col :span="6">
-    <router-link to="/form/sign-in">sign-in</router-link>
+    <el-row :gutter="10">
+  <el-col>
+    <router-link to="/form/sign-in">
+      <el-button size="mini">sign-in</el-button>
+    </router-link>
   </el-col>
-  <el-col :span="6">
-    <router-link to="/form/sign-up">sign-up</router-link>
+  <el-col>
+    <router-link to="/form/sign-up">
+      <el-button size="mini">sign-up</el-button>
+    </router-link>
   </el-col>
-  <el-col :span="6">
-    <router-link to="/form/recovery">recovery</router-link>
+  <el-col>
+    <router-link to="/form/sign-up-pay">
+      <el-button size="mini">sign up payment</el-button>
+    </router-link>
   </el-col>
-  <el-col :span="6">
-    <router-link to="/product/vebinar">vebinar</router-link>
+  <el-col>
+    <router-link to="/form/recovery">
+      <el-button size="mini">recovery</el-button>
+    </router-link>
   </el-col>
+  <el-col>
+    <router-link to="/product/vebinar">
+      <el-button size="mini">vebinar</el-button>
+    </router-link>
+  </el-col>
+  <el-col>
+    <router-link to="/product/product-free">
+      <el-button size="mini">product free</el-button>
+    </router-link>
+  </el-col>
+  <el-col>
+    <router-link to="/product/product-payment">
+      <el-button size="mini">product payment</el-button>
+    </router-link>
+  </el-col>
+  <el-col>
+    <router-link to="/form/success-vebinar">
+      <el-button size="mini">success vebinar</el-button>
+    </router-link>
+  </el-col>
+  <el-col>
+    <router-link to="/course/landing">
+      <el-button size="mini">Course Landing</el-button>
+    </router-link>
+  </el-col>
+  
 </el-row>
   </el-main>
   <el-footer class="footer" height="auto">

@@ -1,5 +1,8 @@
 <template>
-    <img class="header__logo" :src="logo" alt="logo" style="vertical-align: middle;">
+    <el-row class="header-wrapper" type="flex" justify="space-between">
+      <img  :src="logo" alt="logo">
+      <el-button v-if="$route.path !== '/'" type="primary" icon="el-icon-arrow-left" @click="$router.go(-1)"></el-button>
+    </el-row>
 </template>
 
 <script>
@@ -11,7 +14,7 @@
 </script>
 
 <style>
-.header__logo {
+.header-wrapper {
     padding: 23px 0;
   }
 </style>

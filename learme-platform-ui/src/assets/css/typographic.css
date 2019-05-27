@@ -1,60 +1,205 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
-.h1,.h2,.h3,.h4,.h5 {
-  font-family: 'Montserrat', sans-serif;
-  font-style: normal;
-  font-weight: 800;
+.h1,
+.h2,
+.h3,
+.h4,
+.h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 800;
 }
-.h1 { font-size: 56px; line-height: 66px; }
-.h2 { font-size: 40px; line-height: 48px; }
-.h3 { font-size: 30px; line-height: 36px; }
-.h4 { font-size: 24px; line-height: 32px; }
-.h5 { font-size: 16px; line-height: 24px; }
-.subtitle,.body-text,.table-text,.small-text,.tiny-text {
-  font-family: 'Open Sans', sans-serif;
-  font-style: normal;
-  font-weight: normal;
+
+.h1 {
+    font-size: 56px;
+    line-height: 66px;
 }
-.subtitle { font-size: 24px; line-height: 36px; }
-.body-text { font-size: 18px; line-height: 28px; }
-.table-text { font-size: 16px; line-height: 24px; }
-.small-text { font-size: 14px; line-height: 21px; }
-.tiny-text { font-size: 12px; line-height: 18px; }
+
+.h2 {
+    font-size: 40px;
+    line-height: 48px;
+}
+
+.h3 {
+    font-size: 30px;
+    line-height: 36px;
+}
+
+.h4 {
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.h5 {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.subtitle,
+.body-text,
+.table-text,
+.small-text,
+.tiny-text {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    text-indent: 0;
+}
+
+.subtitle {
+    font-size: 24px;
+    line-height: 36px;
+}
+
+.body-text {
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.table-text {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.small-text {
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.tiny-text {
+    font-size: 12px;
+    line-height: 18px;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .h1 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+}
 
 @media (max-width: 767px) {
-  .h1 { font-size: 56px; line-height: 66px; }
-  .h2 { font-size: 24px; line-height: 32px; }
-  .h3 { font-size: 24px; line-height: 32px; }
-  .h4 { font-size: 16px; line-height: 24px; }
-  .h5 { font-size: 12px; line-height: 18px; }
-  .subtitle { font-size: 24px; line-height: 36px; }
-  .body-text { font-size: 18px; line-height: 28px; }
-  .table-text { font-size: 16px; line-height: 24px; }
-  .small-text { font-size: 14px; line-height: 21px; }
-  .tiny-text { font-size: 12px; line-height: 18px; }
+    .h1 {
+      font-size: 24px;
+      line-height: 32px;
+    }
+    .h2 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    .h3 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    .h4 {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .h5 {
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .subtitle {
+        font-size: 24px;
+        line-height: 36px;
+    }
+    .body-text {
+      font-size: 14px;
+      line-height: 21px;
+    }
+    .table-text {
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .small-text {
+        font-size: 14px;
+        line-height: 21px;
+    }
+    .tiny-text {
+        font-size: 12px;
+        line-height: 18px;
+    }
 }
 
+
 /*COLORS*/
-.text-black { color: #151515; }
-.text-dark { color: #616161; }
-.text-gray { color: #9E9E9E; }
-.text-light { color: #E0E0E0; }
-.text-white { color: #FFFFFF; }
 
-.bg-dark {  background-color: #262442; }
-.bg-light-blue {  background-color: #F1F7FD; }
-.bg-gray {  background-color: #F4F4F4; }
-.bg-light-gray {  background-color: #FAFAFA; }
-.bg-white {  background-color: #FFFFFF; }
+.text-black {
+    color: #151515 !important;
+}
 
-.text-success { color: #66CC33; }
-.text-warning { color: #F59A3E; }
-.text-error { color: #FF4D4D; }
-.line-color { color: #DDDDDD; }
-.text-yellow { color: #FFDA67; }
+.text-dark {
+    color: #616161 !important;
+}
 
-.bg-success {  background-color: #66CC33; }
-.bg-warning {  background-color: #F59A3E; }
-.bg-error {  background-color: #FF4D4D; }
-.bg-yellow {  background-color: #FFDA67; }
+.text-gray {
+    color: #9E9E9E !important;
+}
 
+.text-light {
+    color: #E0E0E0 !important;
+}
+
+.text-white {
+    color: #FFFFFF !important;
+}
+
+.text-link {
+    color: #1A80E6 !important;
+}
+
+.bg-dark {
+    background-color: #262442 !important;
+}
+
+.bg-light-blue {
+    background-color: #F1F7FD !important;
+}
+
+.bg-gray {
+    background-color: #F4F4F4 !important;
+}
+
+.bg-light-gray {
+    background-color: #FAFAFA !important;
+}
+
+.bg-white {
+    background-color: #FFFFFF !important;
+}
+
+.text-success {
+    color: #66CC33 !important;
+}
+
+.text-warning {
+    color: #F59A3E !important;
+}
+
+.text-error {
+    color: #FF4D4D !important;
+}
+
+.line-color {
+    color: #DDDDDD !important;
+}
+
+.text-yellow {
+    color: #FFDA67 !important;
+}
+
+.bg-success {
+    background-color: #66CC33 !important;
+}
+
+.bg-warning {
+    background-color: #F59A3E !important;
+}
+
+.bg-error {
+    background-color: #FF4D4D !important;
+}
+
+.bg-yellow {
+    background-color: #FFDA67 !important;
+}
