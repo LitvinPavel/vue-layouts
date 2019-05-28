@@ -80,17 +80,17 @@
     <el-row  class="container py5 py-xs-4">
       <el-col :xs="24" :md="17" class="pr-lg-2">
         <div class="h2 text-black mb3 mb-xs-2">Учебный план</div>
-        <el-card>
+        <el-card shadow="never">
           <div class="text-link h5 pb1 bold">Урок 1</div>
           <div class="body-text text-black bold">Teaching Young Learners a Foreign/Second Language</div>
           <div class="table-text text-black">Самые сложные задачи, стоящие перед учителем английского языка при обучении Young learners. Почему и как методика Letterland помогает эти задачи решать эффективно.</div>
         </el-card>
-        <el-card>
+        <el-card shadow="never">
           <div class="text-link h5 pb1 bold">Урок 1</div>
           <div class="body-text text-black bold">Teaching Young Learners a Foreign/Second Language</div>
           <div class="table-text text-black">Самые сложные задачи, стоящие перед учителем английского языка при обучении Young learners. Почему и как методика Letterland помогает эти задачи решать эффективно.</div>
         </el-card>
-        <el-card :body-style="{ padding: '0' }">
+        <el-card :body-style="{ padding: '0' }" shadow="never">
           <el-collapse accordion class="custom-accordion" >
             <el-collapse-item v-for="(item, item_id) in parts" :name="item_id+1" :key="item_id" class="pt3" style="padding-left:20px;padding-right:20px;">
               <template slot="title">
@@ -120,7 +120,7 @@
             
           </el-collapse>
         </el-card>
-        <el-card>
+        <el-card shadow="never">
           <div class="text-link h5 pb1 bold">Текст</div>
           <div class="body-text text-black bold">Key points learned</div>
         </el-card>
@@ -128,21 +128,21 @@
       </el-col>
       <el-col :xs="24" :md="7">
         <div class="h4 text-black mb4 pt-lg-1 my-xs-2">Преимущества</div>
-        <el-card class="mb2" :body-style="{ display: 'flex', alignItems: 'center', padding: '16px' }">
+        <el-card class="mb2" :body-style="{ display: 'flex', alignItems: 'center', padding: '16px' }" shadow="never">
             <img :src="lesson" alt="">
             <div class="pl2">
               <div class="h5 bold text-black">13 уроков</div>
               <div class="tiny-text text-dark">без домашних заданий</div>
             </div>
         </el-card>
-        <el-card class="mb2" :body-style="{ display: 'flex', alignItems: 'center', padding: '16px' }">
+        <el-card class="mb2" :body-style="{ display: 'flex', alignItems: 'center', padding: '16px' }" shadow="never">
             <img :src="require('../assets/img/course/cross-access.svg')" alt="">
             <div class="pl2">
               <div class="h5 bold text-black">13 уроков</div>
               <div class="tiny-text text-dark">без домашних заданий</div>
             </div>
         </el-card>
-        <el-card :body-style="{ display: 'flex', alignItems: 'center', padding: '16px' }">
+        <el-card :body-style="{ display: 'flex', alignItems: 'center', padding: '16px' }" shadow="never">
             <img :src="require('../assets/img/course/guarant-back.svg')" alt="guarant-back">
             <div class="pl2">
               <div class="h5 bold text-black">13 уроков</div>
@@ -157,8 +157,8 @@
     <el-carousel  ref="heightDesk" class="hidden-sm-and-down" arrow="always" :autoplay="false"  :interval="0" :style="{height:`${heightDesk}px`}">
         <el-carousel-item  v-for="(review, review_id) in reviewsDesc" :key="review_id+'desk'">
             <el-row class="container" :gutter="30" style="flex-wrap: wrap;">
-              <el-col class="heightIndex" :span="8" v-for="(item, item_id) in review" :key="item_id" style="padding-top:60px;display: flex;">
-              <el-card style="overflow: visible;">
+              <el-col :span="8" v-for="(item, item_id) in review" :key="item_id" style="padding-top:60px;display: flex;">
+              <el-card style="overflow: visible;" shadow="never">
                 <img :src="item.avatar" style="margin-top: -60px;">
                 <div class="py3">
                   <div class="h4 text-black">{{ item.name }}</div>
@@ -173,9 +173,11 @@
         </el-carousel-item>
       </el-carousel>
       <el-carousel ref="heightMob" class="hidden-md-and-up carousel-mob-tab" arrow="always" :autoplay="false"  :interval="0"  :style="{height:`${heightMob}px`}">
-        <el-carousel-item v-for="(item, item_id) in reviews" :key="item_id+'mob'">
-          <el-col :span="24" class="carousel-card-wrapper px-xs-2 heightIndex">
-              <el-card :body-id="'body'" :body-style="{ padding: '0' }" class="px-xs-2 px-md-3" style="overflow: visible;" :id="'card'+item_id">
+        
+          <el-carousel-item v-for="(item, item_id) in reviews" :key="item_id+'mob'">
+          <el-col :span="24" class="carousel-card-wrapper px-xs-2">
+            <v-touch @swipeleft="onSwipeLeft" @swiperight="onSwipeRight">
+              <el-card :body-id="'body'" :body-style="{ padding: '0' }" class="px-xs-2 px-md-3" style="overflow: visible;" :id="'card'+item_id" shadow="never">
                 <img :src="item.avatar" class="carousel-card-avatar">
                 <div class="py-xs-2 py-md-3">
                   <div class="h4 text-black">{{ item.name }}</div>
@@ -185,19 +187,23 @@
                   </div>
                 </div>
               </el-card>
+               </v-touch>
             </el-col>
         </el-carousel-item>
+       
+        
       </el-carousel>
+      
   </section>
   <section class="py-xs-3 py-md-5 py-lg-5 bg-white">
     <div class="h2 text-black px-md-3 pb-md-3 px-xs-2 pt-xs-3 pb-xs-3 px-lg-6 mx-lg-1 pb-lg-3">Тарифы</div>
     <el-row class="container" type="flex" style="flex-wrap: wrap; margin-left: 0;margin-right: 0;">
               <el-col class="px1" :lg="8" :xs="24" :sm="24" v-for="(item, item_id) in tariffs" :key="item_id" style="display: flex;">
-              <el-card :body-style="{padding: '0', display: 'flex', flexDirection: 'column', height: '100%'}" class="my-xs-2 my-md-3" style="width: 100%;">
+              <el-card :body-style="{padding: '0', display: 'flex', flexDirection: 'column', height: '100%'}" class="my-xs-2 my-md-3" style="width: 100%;" shadow="never">
                 <div style="padding-top:8px; background: #1A80E6; border-radius: 4px 4px 0px 0px; flex: 0 0 auto;"></div>
                 <div style="flex: 1 0 auto;">
                   <div class="h4 text-black p3">{{ item.title }}</div>
-                  <div class="h2 text-black p3 bg-light-blue">{{ item.price }}</div>
+                  <div class="h2 text-black p3 bg-light-blue">{{ item.price }}<span v-if="item.price !== 'Бесплатно'" class="h4">/мес.</span></div>
                   <div class="pl3 py3 pr4 small-text text-gray">
                     <p v-for="(option, option_id) in item.options" :key="option_id">{{option}}</p>
                   </div>
@@ -205,11 +211,11 @@
                 <div class="p3 text-center" style="flex: 0 0 auto;">
                   <el-button class="bold" style="width: 100%;" type="primary" plain>{{item.btn}}</el-button>
                   <el-button class="text-small" v-if="!item.promo" type="text" @click="item.promo = !item.promo">Есть промокод?</el-button>
-                  <el-row class="pt1" v-else :gutter="5" :justify="center">
-                    <el-col :span="17">
+                  <el-row class="pt1 text-center" v-else :gutter="2" justify="center">
+                    <el-col :sm="12" :lg="19" :xs="19">
                       <el-input size="mini" placeholder="Введите промокод"></el-input>
                     </el-col>
-                    <el-col :span="7">
+                    <el-col :sm="3" :lg="5" :xs="5">
                       <el-button size="mini" type="primary">OK</el-button>
                     </el-col>
                   </el-row>
@@ -218,30 +224,46 @@
             </el-col>
             </el-row>
   </section>
-  <section class="my5">
-    <el-row class="container py2">
-      <el-col>
-        <el-row>
-          <el-col :lg="24" :md="24" :sm="6" :xs="7" class="mb-md-3">
-            <img class="vebinar-img" :src="vebLogo" alt="vebinar-logo">
+  <section>
+    <el-row class="container md-flex pt5 my-lg-3 py-xs-3" style="align-items: center;">
+      <el-col :sm="24" :md="16">
+        <el-row>            
+          <el-col :lg="4" :md="24" :sm="6" :xs="7" class="mb-md-3">
+            <img class="product-img" :src="vebLogo" alt="product-logo" width="90">
           </el-col>
-          <el-col :lg="24" :md="24" :sm="18" :xs="17" class="mb-md-3 text-black">
-            <div class="h4">17 апреля 2019, ср в 18:30 по Москве</div>
-            <div class="h5">начало через 3 дня</div>
-            <div class="h2 text-black hidden-xs-only">Вебинар с красивым названием</div>
+          <el-col :lg="20" :md="24" :sm="18" :xs="17" class="mb-md-3 text-black">
+            <div class="h4">Практический курс</div>
+            <div class="h2 text-black hidden-xs-only mt2">Практический курс по email-маркетингу</div>
           </el-col>
         </el-row>
-        <div class="h2 text-black hidden-sm-and-up py1">Вебинар с красивым названием</div>
+        <div class="h2 text-black hidden-sm-and-up py1">Практический курс по email-маркетингу</div>
       </el-col>
-      <el-col class="pt2">
-          <el-row type="flex" class="footer-btn-send">
-              <el-button style="background: #DF5D39; border-color: #DF5D39;" class="py2" type="primary">Зарегистрироваться</el-button>
+      <el-col :sm="15" :md="8">
+          <el-row type="flex" class="footer-btn-send column-lg column-reverse py-md-3">
+              <el-button style="background: #DF5D39; border-color: #DF5D39; width: 100%;" class="py2" type="primary">Оплатить 160 999 ₽</el-button>
+          <el-row style="display: flex;" class="text-left py2">
+              <el-checkbox style="margin-right: 0; line-height: 21px;"></el-checkbox>
+              <div style="font-size: 14px; line-height: 21px; padding-left: 8px;">Принимаю пользовательское соглашение и даю согласие на обработку моих персональных данных</div>
+            </el-row>
           </el-row>
       </el-col>
     </el-row>
+    <el-row class="container pb5 mb-lg-2 py-xs-3">
+        <el-col :sm="12" :xs="24"> 
+          <img v-for="item in pay" :key="item" :src="item" alt="item" class="pr1 pay-imgs" width="32">
+        </el-col>
+        <el-col :sm="12" :xs="24" class="pay-question">
+          <div class="small-text text-link">Как проходить курс после покупки?</div>
+        </el-col>
+        <el-col :span="24" class="mt2">
+            <div :class="[textVision ? 'text-vision' : 'text-pay', 'text-black', 'tiny-text']">Продавцом настоящего обучающего продукта является ИП ЯВЕРБАУМ О.В. (ОГРН 317774600214447, ИНН 770201025129), адрес: Большой Сергиевский пер. 11-10. В соответствии с законодательством Российской Федерации и защите прав потребителей Продавец гарантирует, что обучающий продукт при обычных условиях его использования не создаст угрозу для жизни, здоровья и имущества Покупателя-потребителя. Продавец гарантирует, что Покупателю предоставлена полная и достоверная информация о свойствах и качествах обучающего продукта. Продавец гарантирует Покупателю право вернуть обучающий продукт/прекратить использование обучающего продукта и получить назад уплаченную покупную цену в полном объеме в случае, если обучающий продукт: 1. Не соответствует заявленным Продавцом описаниям его свойств, качеств, результативности вообще, скорости получения результата и качеству результата, описаниям иных потребительских свойств; 2. Не может быть использован Покупателем в связи с неприемлемой для Покупателя манерой подачи материала. Право на возврат может быть реализовано Покупателем в течение 15 (пятнадцати) календарных дней с момента получения доступа к обучающему продукту. Порядок возврата урегулирован в Пользовательском соглашении. Также Продавец гарантирует, что ему принадлежит право на коммерческое использование обучающего продукта и всех (любых) его составных частей, достаточное для размещения и продажи обучающего продукта на настоящем сайте. Покупателю не могут быть предъявлены претензии со стороны третьих лиц в связи с незаконным использованием обучающего продукта. По всем вопросам к Продавцу Покупатель может обратить по телефону (916) 191-64-95 и адресу электронной почты letterlandrussia@mail.ru. Обращения Покупателей обрабатываются в рабочие дни с 9.00 до 18.00 по местному времени Продавца.
+            </div>
+            <el-button class="hidden-sm-and-up" type="primary" size="mini" plain @click="textVision = !textVision" v-text="textVision ? 'Скрыть' : 'Читать полностью'"></el-button>
+        </el-col>
+    </el-row>
     <el-footer class="footer" height="auto">
-    <div class="secondary-text footer-content">
-      Размещено на Learme. &copy; Learme 2019, <a class="secondary-text" href="">Пользовательское соглашение</a>
+    <div class="text-white footer-content">
+      Размещено на Learme. &copy; Learme 2019, <a class="text-white" href="">Пользовательское соглашение</a>
     </div>
   </el-footer>
   </section>
@@ -258,6 +280,16 @@ export default {
     spicer: require('../assets/img/vebinar/spicer.svg'),
     banner: require('../assets/img/course/banner-top.svg'),
     lesson: require('../assets/img/course/lesson.svg'),
+    pay: {
+        visa: require('../assets/img/payment-icon/visa.svg'),
+        maestro: require('../assets/img/payment-icon/maestro.svg'),
+        master: require('../assets/img/payment-icon/mastercard.svg'),
+        mir: require('../assets/img/payment-icon/mir.svg'),
+        google: require('../assets/img/payment-icon/google.svg'),
+        apple: require('../assets/img/payment-icon/apple.svg'),
+        fz: require('../assets/img/payment-icon/54fz.svg'),
+        yandex: require('../assets/img/payment-icon/yandex.svg'),
+    },
     parts: [
       'Часть 1 Подготовка проекта',
       'Часть 2 Планирование цикла',
@@ -299,14 +331,14 @@ export default {
       },
       {
         title: 'Тариф номер два',
-        price: 'от 19 999 ₽/мес.',
+        price: 'от 19 999 ₽',
         btn: 'Оплатить 19 999 ₽',
         promo: false,
         options: ['Без ограничений по числу курсов и учеников','Свой домен школы (при оплате за год)','Подключение приёма платежей с комиссией 6%','Техподдержка по почте','Интеграция с любой системой приема платежей',]
       },
       {
         title: 'Третий тариф',
-        price: '199 999 ₽/мес.',
+        price: '199 999 ₽',
         btn: 'Оплатить 199 999 ₽',
         promo: false,
         options: ['Без ограничений по числу курсов и учеников','Свой домен школы (при оплате за год)','Подключение приёма платежей с комиссией 1%','Техподдержка по почте','Интеграция с любой системой приема платежей','Отсутствие бренда Learme в дизайне интерфейса',]
@@ -317,7 +349,9 @@ export default {
     heightDesk: 0,
     heightMob: 0,
     isPromocode: false,
-    windowWidth: window.innerWidth
+    windowWidth: window.innerWidth,
+    textVision: false,
+    activeSlide: 0
 
   }),
   created() {
@@ -334,12 +368,18 @@ export default {
       this.heightMob = (this.$refs.heightMob.$children[0].$el.childNodes[1].clientHeight + 50)
     }
   },
-
+  methods: {
+    onSwipeLeft() {
+      this.$refs.heightMob.next()
+    },
+    onSwipeRight() {
+      this.$refs.heightMob.prev()
+    }
+  }
 }
 </script>
 
 <style>
-
 .el-carousel__container {
   height: 95%;
 }
@@ -375,6 +415,9 @@ export default {
   stroke: #1A80E6;
 }
   @media (min-width: 1200px) {
+    .pay-question {
+        text-align: right;
+    }
     .subheader-img {
       padding: 0 135px;
     }
@@ -398,11 +441,20 @@ export default {
     .footer-btn-send > button {
       width: 25%;
     }
+    .md-flex {
+        display: flex;
+    }
+    .column-lg {
+      flex-direction: column;
+    }
   }
   @media (min-width: 768px) and (max-width: 1199px) {
     /* .carousel-mob-tab .el-carousel__container {
       height: 485px;
     } */
+    .pay-question {
+        text-align: right;
+    }
     .carousel-card-wrapper {
       padding-top:60px; 
       padding-left: 117px; 
@@ -430,10 +482,16 @@ export default {
     .footer-btn-send > button {
       width: 50%;
     }
+    .product-img {
+      width: 160px;
+    }
   }
   @media (max-width: 767px) {
     .el-carousel__arrow {
       display: none;
+    }
+    .pay-question {
+        text-align: left;
     }
     /* .carousel-mob-tab .el-carousel__container {
       height: 655px;
@@ -460,6 +518,22 @@ export default {
     }
     .footer-btn-send > button {
       width: 100%;
+    }
+    .product-img {
+      width: 68px;
+    }
+    .pay-imgs {
+        width: 24px;
+    }
+    .text-pay {
+        text-align: justify;
+        -webkit-mask-image: -webkit-linear-gradient(270deg, #000000 51.4%, rgba(0, 0, 0, 0) 100%);
+        height: 131px;
+        overflow: hidden;
+    }
+    .text-vision {
+        text-align: justify;
+        height: auto !important;
     }
   }
 </style>
