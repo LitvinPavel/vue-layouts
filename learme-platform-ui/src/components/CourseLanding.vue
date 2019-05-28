@@ -152,12 +152,12 @@
       </el-col>
     </el-row>
   </section>
-  <section style="background: #1A80E6;" class="py-xs-3 py-md-5">
-    <div class="h2 text-white px-md-3 pb-md-3 px-xs-2 pt-xs-3 pb-xs-3">Отзывы о курсе</div>
-    <el-carousel class="hidden-sm-and-down" :autoplay="false"  :interval="0">
+  <section style="background: #1A80E6;" class="py-xs-3 py-md-5 py-lg-5">
+    <div class="h2 text-white px-md-3 pb-md-3 px-xs-2 pt-xs-3 pb-xs-3 px-lg-6 mx-lg-1 pb-lg-3">Отзывы о курсе</div>
+    <el-carousel  ref="heightDesk" class="hidden-sm-and-down" arrow="always" :autoplay="false"  :interval="0" :style="{height:`${heightDesk}px`}">
         <el-carousel-item  v-for="(review, review_id) in reviewsDesc" :key="review_id+'desk'">
-            <el-row class="container" :gutter="30">
-              <el-col :span="8" v-for="(item, item_id) in review" :key="item_id" style="padding-top:60px;">
+            <el-row class="container" :gutter="30" style="flex-wrap: wrap;">
+              <el-col class="heightIndex" :span="8" v-for="(item, item_id) in review" :key="item_id" style="padding-top:60px;display: flex;">
               <el-card style="overflow: visible;">
                 <img :src="item.avatar" style="margin-top: -60px;">
                 <div class="py3">
@@ -172,10 +172,10 @@
             </el-row>
         </el-carousel-item>
       </el-carousel>
-      <el-carousel class="hidden-md-and-up carousel-mob-tab" arrow="always" :autoplay="false"  :interval="0">
+      <el-carousel ref="heightMob" class="hidden-md-and-up carousel-mob-tab" arrow="always" :autoplay="false"  :interval="0"  :style="{height:`${heightMob}px`}">
         <el-carousel-item v-for="(item, item_id) in reviews" :key="item_id+'mob'">
-          <el-col :span="24" class="carousel-card-wrapper px-xs-2">
-              <el-card :body-style="{ padding: '0' }" class="px-xs-2 px-md-3" style="overflow: visible;">
+          <el-col :span="24" class="carousel-card-wrapper px-xs-2 heightIndex">
+              <el-card :body-id="'body'" :body-style="{ padding: '0' }" class="px-xs-2 px-md-3" style="overflow: visible;" :id="'card'+item_id">
                 <img :src="item.avatar" class="carousel-card-avatar">
                 <div class="py-xs-2 py-md-3">
                   <div class="h4 text-black">{{ item.name }}</div>
@@ -188,6 +188,35 @@
             </el-col>
         </el-carousel-item>
       </el-carousel>
+  </section>
+  <section class="py-xs-3 py-md-5 py-lg-5 bg-white">
+    <div class="h2 text-black px-md-3 pb-md-3 px-xs-2 pt-xs-3 pb-xs-3 px-lg-6 mx-lg-1 pb-lg-3">Тарифы</div>
+    <el-row class="container" type="flex" style="flex-wrap: wrap; margin-left: 0;margin-right: 0;">
+              <el-col class="px1" :lg="8" :xs="24" :sm="24" v-for="(item, item_id) in tariffs" :key="item_id" style="display: flex;">
+              <el-card :body-style="{padding: '0', display: 'flex', flexDirection: 'column', height: '100%'}" class="my-xs-2 my-md-3" style="width: 100%;">
+                <div style="padding-top:8px; background: #1A80E6; border-radius: 4px 4px 0px 0px; flex: 0 0 auto;"></div>
+                <div style="flex: 1 0 auto;">
+                  <div class="h4 text-black p3">{{ item.title }}</div>
+                  <div class="h2 text-black p3 bg-light-blue">{{ item.price }}</div>
+                  <div class="pl3 py3 pr4 small-text text-gray">
+                    <p v-for="(option, option_id) in item.options" :key="option_id">{{option}}</p>
+                  </div>
+                </div>
+                <div class="p3 text-center" style="flex: 0 0 auto;">
+                  <el-button class="bold" style="width: 100%;" type="primary" plain>{{item.btn}}</el-button>
+                  <el-button class="text-small" v-if="!item.promo" type="text" @click="item.promo = !item.promo">Есть промокод?</el-button>
+                  <el-row class="pt1" v-else :gutter="5" :justify="center">
+                    <el-col :span="17">
+                      <el-input size="mini" placeholder="Введите промокод"></el-input>
+                    </el-col>
+                    <el-col :span="7">
+                      <el-button size="mini" type="primary">OK</el-button>
+                    </el-col>
+                  </el-row>
+                </div>
+              </el-card>
+            </el-col>
+            </el-row>
   </section>
   <section class="my5">
     <el-row class="container py2">
@@ -221,6 +250,7 @@
 </template>
 
 <script>
+
 export default {
   data: () => ({
     vebLogo: require('../assets/img/vebinar/vebinar-logo.svg'),
@@ -259,22 +289,68 @@ export default {
         text: 'Я начала я с одного курса, а сегодня у меня их уже четыре. Создание онлайн курса может занимать разное время. Например, курс для учителей я создавала несколько недель. А размещение курса на платформе занимает очень мало времени. Очень здорово, что платформа создает вам качественную лендинговую страницу для вашего курса, это очень важный момент для продвижения. И конечно же, функция приема платежей — это тоже один из ключевых моментов, почему я выбрала эту платформу. Удобство оплаты для пользователей — второй ключевой момент продвижения вашего курса, и здесь это заработало классно!'
       }
     ],
+    tariffs: [
+      {
+        title: 'Тариф номер один',
+        price: 'Бесплатно',
+        btn: 'Выбрать тариф',
+        promo: false,
+        options: ['Без ограничений по числу курсов и учеников','Свой домен школы (при оплате за год)','Подключение приёма платежей с комиссией 10%',]
+      },
+      {
+        title: 'Тариф номер два',
+        price: 'от 19 999 ₽/мес.',
+        btn: 'Оплатить 19 999 ₽',
+        promo: false,
+        options: ['Без ограничений по числу курсов и учеников','Свой домен школы (при оплате за год)','Подключение приёма платежей с комиссией 6%','Техподдержка по почте','Интеграция с любой системой приема платежей',]
+      },
+      {
+        title: 'Третий тариф',
+        price: '199 999 ₽/мес.',
+        btn: 'Оплатить 199 999 ₽',
+        promo: false,
+        options: ['Без ограничений по числу курсов и учеников','Свой домен школы (при оплате за год)','Подключение приёма платежей с комиссией 1%','Техподдержка по почте','Интеграция с любой системой приема платежей','Отсутствие бренда Learme в дизайне интерфейса',]
+      }
+    ],
     reviewsMob: [],
     reviewsDesc: [],
+    heightDesk: 0,
+    heightMob: 0,
+    isPromocode: false,
+    windowWidth: window.innerWidth
+
   }),
   created() {
-
     this.reviewsMob = this.reviews
     this.reviewsDesc = this.reviews.map((_, i, a) => a.slice(i * 3, i * 3 + 3)).filter((el) => el.length)
-    
   },
   mounted() {
-    console.log(document.querySelector('.el-carousel__containery').clientHeight)
-  }
+    setTimeout(() => {
+      this.heightDesk = (this.$refs.heightDesk.$children[0].$el.childNodes[1].clientHeight + 50)
+      this.heightMob = (this.$refs.heightMob.$children[0].$el.childNodes[1].clientHeight + 50)
+    }, 50);
+    window.onresize = () => {
+      this.heightDesk = (this.$refs.heightDesk.$children[0].$el.childNodes[1].clientHeight + 50)
+      this.heightMob = (this.$refs.heightMob.$children[0].$el.childNodes[1].clientHeight + 50)
+    }
+  },
+
 }
 </script>
 
 <style>
+
+.el-carousel__container {
+  height: 95%;
+}
+.el-carousel__arrow--right, .el-carousel__arrow--left {
+  background-color: transparent;
+  width: 60px;
+  height: 60px;
+}
+.el-carousel__arrow--right i, .el-carousel__arrow--left i {
+  font-size: 3rem;
+}
 .el-carousel__button {
   width: 8px;
   height: 8px;
@@ -310,7 +386,7 @@ export default {
       justify-content: flex-end;
     }
     .el-carousel__container {
-      height: 650px;
+      height: 100%;
     }
     .recovery-card {
       max-width: 470px;
@@ -324,9 +400,9 @@ export default {
     }
   }
   @media (min-width: 768px) and (max-width: 1199px) {
-    .carousel-mob-tab .el-carousel__container {
+    /* .carousel-mob-tab .el-carousel__container {
       height: 485px;
-    }
+    } */
     .carousel-card-wrapper {
       padding-top:60px; 
       padding-left: 117px; 
@@ -334,7 +410,7 @@ export default {
     }
     .carousel-card-avatar {
       margin-top: -60px;
-      padding-left: 32px;
+      /* padding-left: 32px; */
     }
     .subheader-img {
       padding: 0 24px;
@@ -359,9 +435,9 @@ export default {
     .el-carousel__arrow {
       display: none;
     }
-    .carousel-mob-tab .el-carousel__container {
+    /* .carousel-mob-tab .el-carousel__container {
       height: 655px;
-    }
+    } */
     .carousel-card-wrapper {
       padding-top:47px;
     }

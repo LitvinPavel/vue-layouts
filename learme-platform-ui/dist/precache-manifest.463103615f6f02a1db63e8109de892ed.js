@@ -48,12 +48,12 @@ self.__precacheManifest = [
     "url": "/js/chunk-24aa3508.53ed92b2.js"
   },
   {
-    "revision": "1f87bbe9b88b8b5b9cd4",
-    "url": "/css/chunk-3f8ed372.5465cac1.css"
+    "revision": "dfdc60a948a3ceda91e9",
+    "url": "/css/chunk-3f8ed372.5e2a68bf.css"
   },
   {
-    "revision": "1f87bbe9b88b8b5b9cd4",
-    "url": "/js/chunk-3f8ed372.542c250e.js"
+    "revision": "dfdc60a948a3ceda91e9",
+    "url": "/js/chunk-3f8ed372.1b6cd16f.js"
   },
   {
     "revision": "8056f1d8ec4fc6f92eba",
@@ -112,20 +112,20 @@ self.__precacheManifest = [
     "url": "/js/chunk-d4f4b3d8.2f7441ba.js"
   },
   {
-    "revision": "0455bd2da936474b8957",
+    "revision": "2981c5f705f019ade809",
     "url": "/css/chunk-vendors.6e808e7d.css"
   },
   {
-    "revision": "0455bd2da936474b8957",
-    "url": "/js/chunk-vendors.583fba36.js"
+    "revision": "2981c5f705f019ade809",
+    "url": "/js/chunk-vendors.b457aa8d.js"
   },
   {
     "revision": "9f6331c901528e67b93643fe54cab2dd",
     "url": "/img/mastercard.9f6331c9.svg"
   },
   {
-    "revision": "b272061f63c39a8094a1",
-    "url": "/js/app.aecf71f0.js"
+    "revision": "18a0c1368dceae01e227",
+    "url": "/js/app.407080b7.js"
   },
   {
     "revision": "34204182b7a62fd582c8",
@@ -244,11 +244,11 @@ self.__precacheManifest = [
     "url": "/img/yandex.d2ac87be.svg"
   },
   {
-    "revision": "e72e468c5823df072e51c7c812cdf7ba",
+    "revision": "10871972cf18d06ede602b946461f445",
     "url": "/index.html"
   },
   {
-    "revision": "b272061f63c39a8094a1",
+    "revision": "18a0c1368dceae01e227",
     "url": "/css/app.1f54db27.css"
   }
 ];
