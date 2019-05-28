@@ -16,14 +16,6 @@ self.__precacheManifest = [
     "url": "/css/chunk-07fe9e61.35b5bdb3.css"
   },
   {
-    "revision": "508ee40da6e611e821a8",
-    "url": "/css/chunk-12220945.ee3cc22b.css"
-  },
-  {
-    "revision": "508ee40da6e611e821a8",
-    "url": "/js/chunk-12220945.4de469bc.js"
-  },
-  {
     "revision": "fedb245b4542c0771395",
     "url": "/css/chunk-1a9b039e.81eeffdd.css"
   },
@@ -54,6 +46,14 @@ self.__precacheManifest = [
   {
     "revision": "a8436915274a86b9e152",
     "url": "/js/chunk-24aa3508.53ed92b2.js"
+  },
+  {
+    "revision": "1f87bbe9b88b8b5b9cd4",
+    "url": "/css/chunk-3f8ed372.5465cac1.css"
+  },
+  {
+    "revision": "1f87bbe9b88b8b5b9cd4",
+    "url": "/js/chunk-3f8ed372.542c250e.js"
   },
   {
     "revision": "8056f1d8ec4fc6f92eba",
@@ -112,20 +112,20 @@ self.__precacheManifest = [
     "url": "/js/chunk-d4f4b3d8.2f7441ba.js"
   },
   {
-    "revision": "2981c5f705f019ade809",
+    "revision": "0455bd2da936474b8957",
     "url": "/css/chunk-vendors.6e808e7d.css"
   },
   {
-    "revision": "2981c5f705f019ade809",
-    "url": "/js/chunk-vendors.b457aa8d.js"
+    "revision": "0455bd2da936474b8957",
+    "url": "/js/chunk-vendors.583fba36.js"
   },
   {
     "revision": "9f6331c901528e67b93643fe54cab2dd",
     "url": "/img/mastercard.9f6331c9.svg"
   },
   {
-    "revision": "4162b987d5e9250eb7f8",
-    "url": "/js/app.3047d9b5.js"
+    "revision": "b272061f63c39a8094a1",
+    "url": "/js/app.aecf71f0.js"
   },
   {
     "revision": "34204182b7a62fd582c8",
@@ -138,6 +138,10 @@ self.__precacheManifest = [
   {
     "revision": "45e6f83c8a03b0ed1ba003951588daae",
     "url": "/img/lesson.45e6f83c.svg"
+  },
+  {
+    "revision": "bf79fde685b20335aea5e5ed92395d76",
+    "url": "/img/reviews1.bf79fde6.svg"
   },
   {
     "revision": "535877f50039c0cb49a6196a5b7517cd",
@@ -240,11 +244,11 @@ self.__precacheManifest = [
     "url": "/img/yandex.d2ac87be.svg"
   },
   {
-    "revision": "236e938895549a37f316f734edb4b51b",
+    "revision": "e72e468c5823df072e51c7c812cdf7ba",
     "url": "/index.html"
   },
   {
-    "revision": "4162b987d5e9250eb7f8",
+    "revision": "b272061f63c39a8094a1",
     "url": "/css/app.1f54db27.css"
   }
 ];

@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.648978946af011d34716c18733ebabab.js"
+  "/precache-manifest.18e925ecccd1d742aed08fa550464954.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "learme-platform-ui"});

@@ -152,6 +152,43 @@
       </el-col>
     </el-row>
   </section>
+  <section style="background: #1A80E6;" class="py-xs-3 py-md-5">
+    <div class="h2 text-white px-md-3 pb-md-3 px-xs-2 pt-xs-3 pb-xs-3">Отзывы о курсе</div>
+    <el-carousel class="hidden-sm-and-down" :autoplay="false"  :interval="0">
+        <el-carousel-item  v-for="(review, review_id) in reviewsDesc" :key="review_id+'desk'">
+            <el-row class="container" :gutter="30">
+              <el-col :span="8" v-for="(item, item_id) in review" :key="item_id" style="padding-top:60px;">
+              <el-card style="overflow: visible;">
+                <img :src="item.avatar" style="margin-top: -60px;">
+                <div class="py3">
+                  <div class="h4 text-black">{{ item.name }}</div>
+                  <div>
+                    <div class="tiny-text text-gray">{{item.description}}</div>
+                    <div class="small-text text-black pt2">{{item.text}}</div>
+                  </div>
+                </div>
+              </el-card>
+            </el-col>
+            </el-row>
+        </el-carousel-item>
+      </el-carousel>
+      <el-carousel class="hidden-md-and-up carousel-mob-tab" arrow="always" :autoplay="false"  :interval="0">
+        <el-carousel-item v-for="(item, item_id) in reviews" :key="item_id+'mob'">
+          <el-col :span="24" class="carousel-card-wrapper px-xs-2">
+              <el-card :body-style="{ padding: '0' }" class="px-xs-2 px-md-3" style="overflow: visible;">
+                <img :src="item.avatar" class="carousel-card-avatar">
+                <div class="py-xs-2 py-md-3">
+                  <div class="h4 text-black">{{ item.name }}</div>
+                  <div >
+                    <div class="tiny-text text-gray">{{item.description}}</div>
+                    <div class="small-text text-black pt2">{{item.text}}</div>
+                  </div>
+                </div>
+              </el-card>
+            </el-col>
+        </el-carousel-item>
+      </el-carousel>
+  </section>
   <section class="my5">
     <el-row class="container py2">
       <el-col>
@@ -195,12 +232,54 @@ export default {
       'Часть 1 Подготовка проекта',
       'Часть 2 Планирование цикла',
       'Часть 3 Планирование цикла'
-    ]
-  })
+    ],
+    reviews: [
+      {
+        avatar: require('../assets/img/course/reviews1.svg'),
+        name: 'Оксана Гаева',
+        description: 'АВТОРИЗОВАННЫЙ ПРЕДСТАВИТЕЛЬ В РОССИИ LETTERLAND INTERNATIONAL',
+        text: 'Я начала я с одного курса, а сегодня у меня их уже четыре. Создание онлайн курса может занимать разное время. Например, курс для учителей я создавала несколько недель. А размещение курса на платформе занимает очень мало времени. Очень здорово, что платформа создает вам качественную лендинговую страницу для вашего курса, это очень важный момент для продвижения. И конечно же, функция приема платежей — это тоже один из ключевых моментов, почему я выбрала эту платформу. Удобство оплаты для пользователей — второй ключевой момент продвижения вашего курса, и здесь это заработало классно!'
+      },
+      {
+        avatar: require('../assets/img/course/reviews1.svg'),
+        name: 'Оксана Гаева',
+        description: 'АВТОРИЗОВАННЫЙ ПРЕДСТАВИТЕЛЬ В РОССИИ LETTERLAND INTERNATIONAL',
+        text: 'Я начала я с одного курса, а сегодня у меня их уже четыре. Создание онлайн курса может занимать разное время. Например, курс для учителей я создавала несколько недель. А размещение курса на платформе занимает очень мало времени. Очень здорово, что платформа создает вам качественную лендинговую страницу для вашего курса, это очень важный момент для продвижения. И конечно же, функция приема платежей — это тоже один из ключевых моментов, почему я выбрала эту платформу. Удобство оплаты для пользователей — второй ключевой момент продвижения вашего курса, и здесь это заработало классно!'
+      },
+      {
+        avatar: require('../assets/img/course/reviews1.svg'),
+        name: 'Оксана Гаева',
+        description: 'АВТОРИЗОВАННЫЙ ПРЕДСТАВИТЕЛЬ В РОССИИ LETTERLAND INTERNATIONAL',
+        text: 'Я начала я с одного курса, а сегодня у меня их уже четыре. Создание онлайн курса может занимать разное время. Например, курс для учителей я создавала несколько недель. А размещение курса на платформе занимает очень мало времени. Очень здорово, что платформа создает вам качественную лендинговую страницу для вашего курса, это очень важный момент для продвижения. И конечно же, функция приема платежей — это тоже один из ключевых моментов, почему я выбрала эту платформу. Удобство оплаты для пользователей — второй ключевой момент продвижения вашего курса, и здесь это заработало классно!'
+      },
+      {
+        avatar: require('../assets/img/course/reviews1.svg'),
+        name: 'Оксана Гаева',
+        description: 'АВТОРИЗОВАННЫЙ ПРЕДСТАВИТЕЛЬ В РОССИИ LETTERLAND INTERNATIONAL',
+        text: 'Я начала я с одного курса, а сегодня у меня их уже четыре. Создание онлайн курса может занимать разное время. Например, курс для учителей я создавала несколько недель. А размещение курса на платформе занимает очень мало времени. Очень здорово, что платформа создает вам качественную лендинговую страницу для вашего курса, это очень важный момент для продвижения. И конечно же, функция приема платежей — это тоже один из ключевых моментов, почему я выбрала эту платформу. Удобство оплаты для пользователей — второй ключевой момент продвижения вашего курса, и здесь это заработало классно!'
+      }
+    ],
+    reviewsMob: [],
+    reviewsDesc: [],
+  }),
+  created() {
+
+    this.reviewsMob = this.reviews
+    this.reviewsDesc = this.reviews.map((_, i, a) => a.slice(i * 3, i * 3 + 3)).filter((el) => el.length)
+    
+  },
+  mounted() {
+    console.log(document.querySelector('.el-carousel__containery').clientHeight)
+  }
 }
 </script>
 
 <style>
+.el-carousel__button {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
 .el-button--primary.is-plain {
   background: #ffffff;
 }
@@ -230,6 +309,9 @@ export default {
       display: flex;
       justify-content: flex-end;
     }
+    .el-carousel__container {
+      height: 650px;
+    }
     .recovery-card {
       max-width: 470px;
       text-align: left;
@@ -242,6 +324,18 @@ export default {
     }
   }
   @media (min-width: 768px) and (max-width: 1199px) {
+    .carousel-mob-tab .el-carousel__container {
+      height: 485px;
+    }
+    .carousel-card-wrapper {
+      padding-top:60px; 
+      padding-left: 117px; 
+      padding-right: 117px;
+    }
+    .carousel-card-avatar {
+      margin-top: -60px;
+      padding-left: 32px;
+    }
     .subheader-img {
       padding: 0 24px;
     }
@@ -262,6 +356,20 @@ export default {
     }
   }
   @media (max-width: 767px) {
+    .el-carousel__arrow {
+      display: none;
+    }
+    .carousel-mob-tab .el-carousel__container {
+      height: 655px;
+    }
+    .carousel-card-wrapper {
+      padding-top:47px;
+    }
+    .carousel-card-avatar {
+      margin-top: -47px;
+      width: 94px;
+      padding-left: 16px;
+    }
     .vebinar-img {
       width: 68px;
     }
