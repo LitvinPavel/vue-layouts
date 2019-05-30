@@ -73,34 +73,33 @@ export default new Router({
             ]
         },
         {
-          path: '/course',
-          component: () =>
-              import ('./layouts/layout_course.vue'),
-          children: [{
-                  path: 'landing',
-                  name: 'landing',
-                  component: () =>
-                      import ('./components/CourseLanding.vue')
-              },
-              {
-                path: 'room',
-                name: 'room',
-                component: () =>
-                    import ('./components/WebRoom.vue')
-              },
-          ]
+            path: '/course',
+            component: () =>
+                import ('./layouts/layout_course.vue'),
+            children: [{
+                    path: 'landing',
+                    name: 'landing',
+                    component: () =>
+                        import ('./components/CourseLanding.vue')
+                },
+                {
+                    path: 'room',
+                    name: 'room',
+                    component: () =>
+                        import ('./components/WebRoom.vue')
+                },
+            ]
         },
         {
-          path: '/author',
-          component: () =>
-              import ('./layouts/layout_author.vue'),
-          children: [{
-                  path: 'account',
-                  name: 'account',
-                  component: () =>
-                      import ('./components/Account.vue')
-              },
-          ]
+            path: '/author',
+            component: () =>
+                import ('./layouts/layout_author_new.vue'),
+            children: [{
+                path: 'account',
+                name: 'account',
+                component: () =>
+                    import ('./components/Account.vue')
+            }, ]
         }
     ]
 })

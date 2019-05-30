@@ -57,7 +57,7 @@
     <el-badge value="!" style="display: inline-flex;" class="px1">
       <img class="pl1" :src="require('../assets/img/main-menu/kostya.svg')" alt="">
     </el-badge>
-    <img @click="show = !show" class="hidden-sm-and-up" :src="require('../assets/img/main-menu/burger.svg')" alt="">
+    <img @click="toggleMenu" class="hidden-sm-and-up" :src="require('../assets/img/main-menu/burger.svg')" alt="">
   </span>
   <el-dropdown class="hidden-xs-only" trigger="click">
     
@@ -68,7 +68,7 @@
 </el-badge>
         <span class="hidden-sm-and-down pl1">Константин</span>
         <i class="hidden-xs-only el-icon-arrow-down el-icon--right"></i>
-        <img @click="show = !show" class="hidden-sm-and-up" :src="require('../assets/img/main-menu/burger.svg')" alt="">
+        
       </span>
       <el-dropdown-menu slot="dropdown">
         <el-dropdown-item icon="el-icon-plus">Action 1</el-dropdown-item>
@@ -79,42 +79,6 @@
       </el-dropdown-menu>
     </el-dropdown>
 </el-col>
-<transition name="slide-fade">
-  <div v-show="show" style="position: fixed;height: 100%; left: 0; top: 50px; width: 100%; background: #ffffff; z-index:999;">
-    <el-menu
-      default-active="2"
-      class="el-menu-vertical-demo">
-      <el-menu-item >
-        <img :src="require('../assets/img/main-menu/learn.svg')" alt="">
-        <span class="small-text pl1">Курсы</span>
-      </el-menu-item>
-      <el-menu-item index="1">
-        <img :src="require('../assets/img/main-menu/play_circle_outline.svg')" alt="">
-        <span class="small-text pl1">Вебинары</span>
-      </el-menu-item>
-      <el-menu-item index="2">
-        <img :src="require('../assets/img/main-menu/star.svg')" alt="">
-        <span class="small-text pl1">Продукты</span>
-      </el-menu-item>
-      <el-menu-item index="3">
-        <img :src="require('../assets/img/main-menu/people.svg')" alt="">
-        <span class="small-text pl1">Ученики</span>
-      </el-menu-item>
-      <el-menu-item index="4">
-        <img :src="require('../assets/img/main-menu/money.svg')" alt="">
-        <span class="small-text pl1">Финансы</span>
-      </el-menu-item>
-      <el-menu-item index="4">
-        <img :src="require('../assets/img/main-menu/settings.svg')" alt="">
-        <span class="small-text pl1">Настройки</span>
-      </el-menu-item>
-      <el-menu-item index="4">
-        <img :src="require('../assets/img/main-menu/help.svg')" alt="">
-        <span class="small-text pl1">Помощь</span>
-      </el-menu-item>
-    </el-menu>
-  </div>
-</transition>
 </el-header>
 </template>
 
@@ -123,10 +87,15 @@
     data: () => ({
       activeIndex: '1',
       show: false,
+      show1: false,
     }),
     methods: {
       handleSelect(key, keyPath) {
         console.log(key, keyPath);
+      },
+      toggleMenu() {
+        this.show1 = !this.show1
+        this.$emit('isMenu', this.show1)
       }
     }
   }
