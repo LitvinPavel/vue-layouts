@@ -50,6 +50,16 @@
       <el-button size="mini">Course Landing</el-button>
     </router-link>
   </el-col>
+  <el-col>
+    <router-link to="/course/room">
+      <el-button size="mini">Webinar Room</el-button>
+    </router-link>
+  </el-col>
+  <el-col>
+    <router-link to="/author/account">
+      <el-button size="mini">Account</el-button>
+    </router-link>
+  </el-col>
   
 </el-row>
   </el-main>

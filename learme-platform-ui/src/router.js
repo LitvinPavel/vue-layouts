@@ -82,6 +82,24 @@ export default new Router({
                   component: () =>
                       import ('./components/CourseLanding.vue')
               },
+              {
+                path: 'room',
+                name: 'room',
+                component: () =>
+                    import ('./components/WebRoom.vue')
+              },
+          ]
+        },
+        {
+          path: '/author',
+          component: () =>
+              import ('./layouts/layout_author.vue'),
+          children: [{
+                  path: 'account',
+                  name: 'account',
+                  component: () =>
+                      import ('./components/Account.vue')
+              },
           ]
         }
     ]
