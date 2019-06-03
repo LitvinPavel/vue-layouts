@@ -22,7 +22,17 @@ import Header from '../components/Header'
 </script>
 
 <style>
-  @media (min-width: 1440px) {
+  @media (min-width: 320px) {
+    .container {
+      padding: 32px 0;
+    }
+  }
+  @media (min-width: 768px) {
+    .container {
+      padding: 48px 24px;
+    }
+  }
+  @media (min-width: 1200px) {
     .container {
       padding: 80px 135px;
     }

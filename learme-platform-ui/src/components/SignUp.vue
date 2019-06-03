@@ -1,8 +1,8 @@
 <template>
       <el-row class="main-row">
         <div class="m-auto">
-          <el-card class="signup-card">
-          <div class="h3 text-center mb3">Регистрация</div>
+          <el-card :body-style="{padding: '20px 0 0 0'}" class="signup-card">
+          <div class="h3 text-center mb3 mb-xs-1">Регистрация</div>
           <div class="pre-message text-center">
             Чтобы начать использовать Learme пожалуйста зарегистрируйтесь или <a class="link" href="">авторизуйтесь</a> если у вас уже есть аккаунт в нашей системе:
           </div>
@@ -14,7 +14,7 @@
               <el-input placeholder="Электронная почта" type="email" v-model="signup.email"></el-input>
             </el-form-item>
             <el-form-item>
-              <el-input placeholder="Номер телефона, 10 цифр" v-model="signup.phone" class="input-with-select">
+              <el-input :placeholder="phonePlaceholder" v-model="signup.phone" class="input-with-select">
                 <el-select size="mini" v-model="signup.select" slot="prepend" placeholder="+375">
                   <el-option label="+375" value="1"></el-option>
                   <el-option label="+7" value="2"></el-option>
@@ -22,14 +22,14 @@
                 </el-select>
               </el-input>
             </el-form-item>
-            <el-row style="display: flex;" class="text-left pb2">
-              <el-checkbox style="margin-right: 0; line-height: 21px;"></el-checkbox>
-              <div style="font-size: 14px; line-height: 21px; padding-left: 8px;">Принимаю пользовательское соглашение</div>
+            <el-row type="flex" class="text-left pb2">
+              <el-checkbox class="mr0"></el-checkbox>
+              <div class="pl1 small-text text-black">Принимаю пользовательское соглашение</div>
             </el-row>
             <el-form-item >
               <el-row class="line-height-21">
                 <el-col :xs="24" :sm="12" >
-                  <el-button class="w-xs-100" type="primary" @click="submit">Зарегистрироваться</el-button>
+                  <el-button class="w-xs-100" type="primary" @click="">Зарегистрироваться</el-button>
                 </el-col>
                 <el-col class="hidden-xs-only" :sm="12" >
                   <div>Пароль придёт на электронную почту сразу после регистрации.</div>
@@ -41,19 +41,19 @@
           <el-row class="divider-top">
             <el-col :span="8" class="divider-right">
               <div class="social-content">
-                <img :src="vkIcon" alt="vk"/>
+                <img :src="require('../assets/img/social/vk.svg')" alt="vk"/>
                 <span class="secondary-text px1">Вконтакте</span>
               </div>
             </el-col>
             <el-col :span="8" class="divider-right">
               <div class="social-content">
-                <img :src="fbIcon" alt="fb"/>
+                <img :src="require('../assets/img/social/fb.svg')" alt="fb"/>
                 <span class="secondary-text px1">Facebook</span>
               </div>
             </el-col>
             <el-col :span="8" >
               <div class="social-content">
-                <img :src="gooIcon" alt="google"/>
+                <img :src="require('../assets/img/social/google.svg')" alt="google"/>
                 <span class="secondary-text px1">Google</span>
               </div>
             </el-col>
@@ -67,20 +67,20 @@
 <script>
 export default {
   data: () => ({
-    vkIcon: require('../assets/img/social/vk.svg'),
-    fbIcon: require('../assets/img/social/fb.svg'),
-    gooIcon: require('../assets/img/social/google.svg'),
     signup: {
       name: '',
       email: '',
       phone: '',
       select: ''
     },
+    phonePlaceholder: 'Номер телефона, 10 цифр'
   }),
-  methods: {
-    submit() {
-
-    }
+  mounted() {
+      if (document.body.offsetWidth < 768) {
+        this.phonePlaceholder = 'телефон'
+      } else {
+        this.phonePlaceholder = 'Номер телефона, 10 цифр'
+      }
   }
 }
 </script>
@@ -91,9 +91,6 @@ export default {
   padding: 0;
   position: relative;
 }
-.signup-card > .el-card__body {
-  padding: 20px 0 0 0 !important;
-}
 .signup-btn {
   width: 177px;
   height: 50px;
@@ -103,10 +100,6 @@ export default {
 .signup-form {
   padding: 0 40px;
   text-align: center;
-}
-.h1 {
-  padding: 20px 40px 0 40px;
-  margin-bottom: 16px;
 }
 .social-content {
   padding: 20px 40px; 
@@ -135,9 +128,6 @@ export default {
     height: 39px;
     font-size: 16px;
     line-height: 16px;
-  }
-  .signup-card > .el-card__body {
-    padding: 0 !important;
   }
   .pre-message {
     padding: 0 24px 32px 24px;

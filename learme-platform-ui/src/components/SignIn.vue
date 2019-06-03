@@ -1,8 +1,8 @@
 <template>
       <el-row class="main-row">
         <div class="m-auto">
-          <el-card class="signin-card">
-          <div class="h3 text-center mb3">Вход</div>
+          <el-card :body-style="{padding: '20px 0 0 0'}" class="signin-card">
+          <div class="h3 text-center mb3 mb-xs-1">Вход</div>
           <el-form class="signin-form" :model="signin" ref="signin">
             <el-form-item>
               <el-input placeholder="Email" v-model="signin.email"></el-input>
@@ -11,26 +11,26 @@
               <el-input placeholder="Пароль" v-model="signin.password"></el-input>
             </el-form-item>
             <el-form-item>
-              <el-button class="signin-btn" type="primary" @click="submit">Войти</el-button>
+              <el-button class="signin-btn" type="primary" @click="">Войти</el-button>
             </el-form-item>
           </el-form>
-          <div class="text-center p-md-2">или войти с помощью</div>
+          <div class="text-center p2 pb-xs-2">или войти с помощью</div>
           <el-row class="divider-top">
             <el-col :span="8" class="divider-right">
               <div class="social-content">
-                <img :src="vkIcon" alt="vk"/>
+                <img :src="require('../assets/img/social/vk.svg')" alt="vk"/>
                 <span class="secondary-text px1">Вконтакте</span>
               </div>
             </el-col>
             <el-col :span="8" class="divider-right">
               <div class="social-content">
-                <img :src="fbIcon" alt="fb"/>
+                <img :src="require('../assets/img/social/fb.svg')" alt="fb"/>
                 <span class="secondary-text px1">Facebook</span>
               </div>
             </el-col>
             <el-col :span="8" >
               <div class="social-content">
-                <img :src="gooIcon" alt="google"/>
+                <img :src="require('../assets/img/social/google.svg')" alt="google"/>
                 <span class="secondary-text px1">Google</span>
               </div>
             </el-col>
@@ -54,19 +54,11 @@
 <script>
 export default {
   data: () => ({
-    vkIcon: require('../assets/img/social/vk.svg'),
-    fbIcon: require('../assets/img/social/fb.svg'),
-    gooIcon: require('../assets/img/social/google.svg'),
     signin: {
       password: '',
       email: ''
     }
-  }),
-  methods: {
-    submit() {
-
-    }
-  }
+  })
 }
 </script>
 
@@ -75,9 +67,6 @@ export default {
   max-width: 570px;
   padding: 0;
   position: relative;
-}
-.signin-card > .el-card__body {
-  padding: 20px 0 0 0 !important;
 }
 .signin-btn {
   width: 177px;
@@ -89,9 +78,7 @@ export default {
   padding: 0 40px;
   text-align: center;
 }
-.h1 {
-  padding: 20px 40px 12px 40px;
-}
+
 .social-content {
   padding: 20px 40px; 
   display: flex; 
@@ -110,9 +97,6 @@ export default {
     height: 39px;
     font-size: 16px;
     line-height: 16px;
-  }
-  .signin-card > .el-card__body {
-    padding: 0 !important;
   }
 }
 </style>

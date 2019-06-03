@@ -70,6 +70,18 @@
     font-size: 12px;
     line-height: 18px;
 }
+/*ALIGN*/
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.justify-center { justify-content: center; }
+.justify-space-between { justify-content: space-between; }
+.justify-space-around { justify-content: space-around; }
+.align-center { align-items: center; }
+.d-flex { display: flex; }
+.d-inline-flex { display: inline-flex; }
+.flex-column { flex-direction: column; }
+
 
 @media (min-width: 768px) and (max-width: 1199px) {
   .h1 {

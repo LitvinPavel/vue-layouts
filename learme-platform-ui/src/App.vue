@@ -87,6 +87,11 @@ export default {
     min-height: calc(100vh - 177px); 
     display: flex;
   }
+  .el-button--primary:hover {
+    color: #FFF;
+    background-color: #DF5D39;
+    border-color: #DF5D39;
+  }
   @media only screen and (min-width: 320px) {
     h1 {
       font-size: 24px;

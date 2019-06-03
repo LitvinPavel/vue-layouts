@@ -1,105 +1,106 @@
 <template>
-<div>
-  <section>
-    <div class="subheader-img bg-white">
-      <img :src="banner" width="100%">
-    </div>
-    <el-row class="container pt4 pt-xs-3 pb5 pb-xs-4 bg-white">
-      <el-col :xs="24" :sm="15" :md="17">
-        <div class="small-text text-gray" style="text-transform: uppercase;letter-spacing: 0.1em;">Практический курс</div>
-        <div class="h1 text-black">Практический курс по email-маркетингу</div>
-        <div class="body-text text-black pt-lg-3 pt-md-2 pt-xs-1">Практический курс по Email-маркетингу. Все элементы успешной СТРАТЕГИИ.</div>
-      </el-col>
-      <el-col :xs="24" :sm="9" :md="7" class="mt-xs-3">
-        <el-card :body-style="{ justifyContent: 'center', display: 'flex', flexDirection: 'column' }" shadow="never">
-          <div class="text-center body-text text-black pb2 pb-xs-1" >
-            Стоимость
-          </div>
-          <div class="text-center h3 text-black">
-            от 160 999 ₽
-          </div>
-          <div class="text-center small-text text-gray">
-            Цена начального тарифа
-          </div>
-          <el-button class="mt3 mt-xs-2" type="primary">Смотреть тарифы</el-button>
-          <div class="small-text text-link text-center mt1">
-            Есть промокод?
-          </div>
-        </el-card>
-      </el-col>
-    </el-row>
-    <el-row class="container pt4 pt-xs-3 pb5 pb-xs-4 bg-white">
-      <iframe width="100%" style="height: 45vw;" src="https://www.youtube.com/embed/YJPbOlDXmzQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </el-row>
-  </section>
-  <section class="bg-white">
-    <el-row class="container column-reverse" type="flex">
-      <el-col :lg="14" :md="12" :xs="24">
-        <el-row>
-          <el-col :sm="20" class="pt-xs-5 pt-md-5 pt-lg-0">
-            <div class="h3 text-black">Рассказ о вебинаре с красивым названием</div>
-            <div class="body-text py2 text-black">
-              <p>В этой рабочей тетради каждый из вас найдет краткое изложение всех двадцати моих уроков плюс задания по каждому уроку. Хочу сказать, что навык успешных публичных выступлений не может прийти сам по себе. Те люди, которые делают упражнения и готовятся к выступлениям согласно полученным советам, всегда окажутся впереди тех, кто прослушал курс ради «фана» (знаю, такие тоже есть).</p>
-              <p>Выигрывают те из вас, кто начинает чаще выступать – не важно, это тост в кругу семьи или небольшой урок в школе, где учится ваш ребенок. Мы не можем научиться выступать, если не делаем это. В течение многих лет я наблюдаю за своими учениками.</p>
-              <p>Вывод простой – хорошими спикерами становятся те из вас, кто больше работает и учится на своих ошибках. Советую делать упражнения, привлекая друзей, родственников, взрослых детей. </p>
-              <p>Таким образом, вы будете иметь обратную связь от «слушателей», а без этого хорошим спикером стать невозможно. Потому что самое главное – это не сказать, а запомниться!</p>
-              <p>Желаю успеха!</p>
+  <div>
+    <section>
+      <div class="subheader-img bg-white">
+        <img :src="banner" width="100%">
+      </div>
+      <el-row class="container pt4 pt-xs-3 pb5 pb-xs-4 bg-white">
+        <el-col :xs="24" :sm="15" :md="17">
+          <div class="small-text text-gray" style="text-transform: uppercase;letter-spacing: 0.1em;">Практический курс</div>
+          <div class="h1 text-black">Практический курс по email-маркетингу</div>
+          <div class="body-text text-black pt-lg-3 pt-md-2 pt-xs-1">Практический курс по Email-маркетингу. Все элементы успешной СТРАТЕГИИ.</div>
+        </el-col>
+        <el-col :xs="24" :sm="9" :md="7" class="mt-xs-3">
+          <el-card :body-style="{ justifyContent: 'center', display: 'flex', flexDirection: 'column' }" shadow="never">
+            <div class="text-center body-text text-black pb2 pb-xs-1">
+              Стоимость
             </div>
-
-          </el-col>
-        </el-row>
-      </el-col>
-      <el-col :lg="10" :md="12" :xs="24">
-        <el-row :gutter="20">
-          <el-col class="pt3 card-wrapper">
-            <el-card class="recovery-card" shadow="never">
-              <el-row>
-                <el-col :lg="6" :xs="24">
-                  <img :src="spicer" alt="" width="104">
-                </el-col>
-              <el-col :lg="18" :xs="24" class="pl-lg-2">
-                <div class="small-text">Автор курса</div>
-                <div class="h5">Константин Константинопольский</div>
-                <div class="small-text text-gray">Генеральный директор GetResponse Россия – платформы для комплексного email-маркетинга</div>
-              </el-col>
-              <el-col :span="24" class="pt3 p-md-1 p-xs-1 pb3 pb-xs-2">
-                <div class="small-text text-black" style="text-align:left;">
-                  <p>GetResponse одна из самых популярных платформ рассылок в РФ и в мире, победитель конкурса EmailShow 2016 и 2017.</p>
-                  <p>Email/CRM-маркетингом занимаюсь уже более 10 лет. Принимал участие в запуске Email-маркетинга в сотнях проектов и в малом бизнесе и для крупнейших игроков онлайн/оффлайн ритейла, банковской и туристической отраслей, рынка образовательных услуг и др. Разработал курсы и преподаю Email маркетинг в бизнес-школах Синергия, Нетология, RMA, Бизнес Молодость. Помогаю компаниям строить крепкие отношения с клиентами.</p>
-                  </div>
-              </el-col>
-              <img :src="chatQuestion" alt="">
-              </el-row>
-            </el-card>
-          </el-col>
-        </el-row>
-      </el-col>
-    </el-row>
-  </section>
-  <section>
-    <el-row  class="container py5 py-xs-4">
-      <el-col :xs="24" :md="17" class="pr-lg-2">
-        <div class="h2 text-black mb3 mb-xs-2">Учебный план</div>
-        <el-card shadow="never">
-          <div class="text-link h5 pb1 bold">Урок 1</div>
-          <div class="body-text text-black bold">Teaching Young Learners a Foreign/Second Language</div>
-          <div class="table-text text-black">Самые сложные задачи, стоящие перед учителем английского языка при обучении Young learners. Почему и как методика Letterland помогает эти задачи решать эффективно.</div>
-        </el-card>
-        <el-card shadow="never">
-          <div class="text-link h5 pb1 bold">Урок 1</div>
-          <div class="body-text text-black bold">Teaching Young Learners a Foreign/Second Language</div>
-          <div class="table-text text-black">Самые сложные задачи, стоящие перед учителем английского языка при обучении Young learners. Почему и как методика Letterland помогает эти задачи решать эффективно.</div>
-        </el-card>
-        <el-card :body-style="{ padding: '0' }" shadow="never">
-          <el-collapse accordion class="custom-accordion" >
-            <el-collapse-item v-for="(item, item_id) in parts" :name="item_id+1" :key="item_id" class="pt3" style="padding-left:20px;padding-right:20px;">
-              <template slot="title">
-                <svg class="custom-accardion__arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M0.5 4C0.5 2.067 2.067 0.5 4 0.5H20C21.933 0.5 23.5 2.067 23.5 4V20C23.5 21.933 21.933 23.5 20 23.5H4C2.067 23.5 0.5 21.933 0.5 20V4Z" stroke="#E0E0E0"/>
-                  <path d="M18 9L12 15L6 9" stroke="#9E9E9E"/>
-                </svg>
-                <span class="pl2 pl-xs-1 h5 bold">{{item}}</span>
-              </template>
+            <div class="text-center h3 text-black">
+              от 160 999 ₽
+            </div>
+            <div class="text-center small-text text-gray">
+              Цена начального тарифа
+            </div>
+            <el-button class="mt3 mt-xs-2" type="primary">Смотреть тарифы</el-button>
+            <div class="small-text text-link text-center mt1">
+              Есть промокод?
+            </div>
+          </el-card>
+        </el-col>
+      </el-row>
+      <el-row class="container pt4 pt-xs-3 pb5 pb-xs-4 bg-white">
+        <iframe width="100%" style="height: 45vw;" src="https://www.youtube.com/embed/YJPbOlDXmzQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </el-row>
+    </section>
+    <section class="bg-white">
+      <el-row class="container column-reverse" type="flex">
+        <el-col :lg="14" :md="12" :xs="24">
+          <el-row>
+            <el-col :sm="20" class="pt-xs-5 pt-md-5 pt-lg-0">
+              <div class="h3 text-black">Рассказ о вебинаре с красивым названием</div>
+              <div class="body-text py2 text-black">
+                <p>В этой рабочей тетради каждый из вас найдет краткое изложение всех двадцати моих уроков плюс задания по каждому уроку. Хочу сказать, что навык успешных публичных выступлений не может прийти сам по себе. Те люди, которые делают упражнения
+                  и готовятся к выступлениям согласно полученным советам, всегда окажутся впереди тех, кто прослушал курс ради «фана» (знаю, такие тоже есть).</p>
+                <p>Выигрывают те из вас, кто начинает чаще выступать – не важно, это тост в кругу семьи или небольшой урок в школе, где учится ваш ребенок. Мы не можем научиться выступать, если не делаем это. В течение многих лет я наблюдаю за своими учениками.</p>
+                <p>Вывод простой – хорошими спикерами становятся те из вас, кто больше работает и учится на своих ошибках. Советую делать упражнения, привлекая друзей, родственников, взрослых детей. </p>
+                <p>Таким образом, вы будете иметь обратную связь от «слушателей», а без этого хорошим спикером стать невозможно. Потому что самое главное – это не сказать, а запомниться!</p>
+                <p>Желаю успеха!</p>
+              </div>
+            </el-col>
+          </el-row>
+        </el-col>
+        <el-col :lg="10" :md="12" :xs="24">
+          <el-row :gutter="20">
+            <el-col class="pt3 card-wrapper">
+              <el-card class="recovery-card" shadow="never">
+                <el-row>
+                  <el-col :lg="6" :xs="24">
+                    <img :src="spicer" alt="" width="104">
+                  </el-col>
+                  <el-col :lg="18" :xs="24" class="pl-lg-2">
+                    <div class="small-text">Автор курса</div>
+                    <div class="h5">Константин Константинопольский</div>
+                    <div class="small-text text-gray">Генеральный директор GetResponse Россия – платформы для комплексного email-маркетинга</div>
+                  </el-col>
+                  <el-col :span="24" class="pt3 p-md-1 p-xs-1 pb3 pb-xs-2">
+                    <div class="small-text text-black" style="text-align:left;">
+                      <p>GetResponse одна из самых популярных платформ рассылок в РФ и в мире, победитель конкурса EmailShow 2016 и 2017.</p>
+                      <p>Email/CRM-маркетингом занимаюсь уже более 10 лет. Принимал участие в запуске Email-маркетинга в сотнях проектов и в малом бизнесе и для крупнейших игроков онлайн/оффлайн ритейла, банковской и туристической отраслей, рынка образовательных
+                        услуг и др. Разработал курсы и преподаю Email маркетинг в бизнес-школах Синергия, Нетология, RMA, Бизнес Молодость. Помогаю компаниям строить крепкие отношения с клиентами.</p>
+                    </div>
+                  </el-col>
+                  <img :src="chatQuestion" alt="">
+                </el-row>
+              </el-card>
+            </el-col>
+          </el-row>
+        </el-col>
+      </el-row>
+    </section>
+    <section>
+      <el-row class="container py5 py-xs-4">
+        <el-col :xs="24" :md="17" class="pr-lg-2">
+          <div class="h2 text-black mb3 mb-xs-2">Учебный план</div>
+          <el-card shadow="never">
+            <div class="text-link h5 pb1 bold">Урок 1</div>
+            <div class="body-text text-black bold">Teaching Young Learners a Foreign/Second Language</div>
+            <div class="table-text text-black">Самые сложные задачи, стоящие перед учителем английского языка при обучении Young learners. Почему и как методика Letterland помогает эти задачи решать эффективно.</div>
+          </el-card>
+          <el-card shadow="never">
+            <div class="text-link h5 pb1 bold">Урок 1</div>
+            <div class="body-text text-black bold">Teaching Young Learners a Foreign/Second Language</div>
+            <div class="table-text text-black">Самые сложные задачи, стоящие перед учителем английского языка при обучении Young learners. Почему и как методика Letterland помогает эти задачи решать эффективно.</div>
+          </el-card>
+          <el-card :body-style="{ padding: '0' }" shadow="never">
+            <el-collapse accordion class="custom-accordion">
+              <el-collapse-item v-for="(item, item_id) in parts" :name="item_id+1" :key="item_id" class="pt3" style="padding-left:20px;padding-right:20px;">
+                <template slot="title">
+                  <svg class="custom-accardion__arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.5 4C0.5 2.067 2.067 0.5 4 0.5H20C21.933 0.5 23.5 2.067 23.5 4V20C23.5 21.933 21.933 23.5 20 23.5H4C2.067 23.5 0.5 21.933 0.5 20V4Z" stroke="#E0E0E0"/>
+                    <path d="M18 9L12 15L6 9" stroke="#9E9E9E"/>
+                  </svg>
+                  <span class="pl2 pl-xs-1 h5 bold">{{item}}</span>
+</template>
               <div class="pl4 ml1">
                 <div class="text-link table-text">Введение</div>
                 <div class="body-text text-black bold">Подготовка проекта</div>
@@ -248,19 +249,7 @@
           </el-row>
       </el-col>
     </el-row>
-    <el-row class="container pb5 mb-lg-2 py-xs-3">
-        <el-col :sm="12" :xs="24"> 
-          <img v-for="item in pay" :key="item" :src="item" alt="item" class="pr1 pay-imgs" width="32">
-        </el-col>
-        <el-col :sm="12" :xs="24" class="pay-question">
-          <div class="small-text text-link">Как проходить курс после покупки?</div>
-        </el-col>
-        <el-col :span="24" class="mt2">
-            <div :class="[textVision ? 'text-vision' : 'text-pay', 'text-black', 'tiny-text']">Продавцом настоящего обучающего продукта является ИП ЯВЕРБАУМ О.В. (ОГРН 317774600214447, ИНН 770201025129), адрес: Большой Сергиевский пер. 11-10. В соответствии с законодательством Российской Федерации и защите прав потребителей Продавец гарантирует, что обучающий продукт при обычных условиях его использования не создаст угрозу для жизни, здоровья и имущества Покупателя-потребителя. Продавец гарантирует, что Покупателю предоставлена полная и достоверная информация о свойствах и качествах обучающего продукта. Продавец гарантирует Покупателю право вернуть обучающий продукт/прекратить использование обучающего продукта и получить назад уплаченную покупную цену в полном объеме в случае, если обучающий продукт: 1. Не соответствует заявленным Продавцом описаниям его свойств, качеств, результативности вообще, скорости получения результата и качеству результата, описаниям иных потребительских свойств; 2. Не может быть использован Покупателем в связи с неприемлемой для Покупателя манерой подачи материала. Право на возврат может быть реализовано Покупателем в течение 15 (пятнадцати) календарных дней с момента получения доступа к обучающему продукту. Порядок возврата урегулирован в Пользовательском соглашении. Также Продавец гарантирует, что ему принадлежит право на коммерческое использование обучающего продукта и всех (любых) его составных частей, достаточное для размещения и продажи обучающего продукта на настоящем сайте. Покупателю не могут быть предъявлены претензии со стороны третьих лиц в связи с незаконным использованием обучающего продукта. По всем вопросам к Продавцу Покупатель может обратить по телефону (916) 191-64-95 и адресу электронной почты letterlandrussia@mail.ru. Обращения Покупателей обрабатываются в рабочие дни с 9.00 до 18.00 по местному времени Продавца.
-            </div>
-            <el-button class="hidden-sm-and-up" type="primary" size="mini" plain @click="textVision = !textVision" v-text="textVision ? 'Скрыть' : 'Читать полностью'"></el-button>
-        </el-col>
-    </el-row>
+    <Pay class="pb5 mb-lg-2 py-xs-3"></Pay>
     <el-footer class="footer" height="auto">
     <div class="text-white footer-content">
       Размещено на Learme. &copy; Learme 2019, <a class="text-white" href="">Пользовательское соглашение</a>
@@ -272,151 +261,140 @@
 </template>
 
 <script>
-
-export default {
-  data: () => ({
-    vebLogo: require('../assets/img/vebinar/vebinar-logo.svg'),
-    chatQuestion: require('../assets/img/social/telegram-chat-question.svg'),
-    spicer: require('../assets/img/vebinar/spicer.svg'),
-    banner: require('../assets/img/course/banner-top.svg'),
-    lesson: require('../assets/img/course/lesson.svg'),
-    pay: {
-        visa: require('../assets/img/payment-icon/visa.svg'),
-        maestro: require('../assets/img/payment-icon/maestro.svg'),
-        master: require('../assets/img/payment-icon/mastercard.svg'),
-        mir: require('../assets/img/payment-icon/mir.svg'),
-        google: require('../assets/img/payment-icon/google.svg'),
-        apple: require('../assets/img/payment-icon/apple.svg'),
-        fz: require('../assets/img/payment-icon/54fz.svg'),
-        yandex: require('../assets/img/payment-icon/yandex.svg'),
+  import Pay from './Pay'
+  export default {
+    components: {
+      Pay
     },
-    parts: [
-      'Часть 1 Подготовка проекта',
-      'Часть 2 Планирование цикла',
-      'Часть 3 Планирование цикла'
-    ],
-    reviews: [
-      {
-        avatar: require('../assets/img/course/reviews1.svg'),
-        name: 'Оксана Гаева',
-        description: 'АВТОРИЗОВАННЫЙ ПРЕДСТАВИТЕЛЬ В РОССИИ LETTERLAND INTERNATIONAL',
-        text: 'Я начала я с одного курса, а сегодня у меня их уже четыре. Создание онлайн курса может занимать разное время. Например, курс для учителей я создавала несколько недель. А размещение курса на платформе занимает очень мало времени. Очень здорово, что платформа создает вам качественную лендинговую страницу для вашего курса, это очень важный момент для продвижения. И конечно же, функция приема платежей — это тоже один из ключевых моментов, почему я выбрала эту платформу. Удобство оплаты для пользователей — второй ключевой момент продвижения вашего курса, и здесь это заработало классно!'
-      },
-      {
-        avatar: require('../assets/img/course/reviews1.svg'),
-        name: 'Оксана Гаева',
-        description: 'АВТОРИЗОВАННЫЙ ПРЕДСТАВИТЕЛЬ В РОССИИ LETTERLAND INTERNATIONAL',
-        text: 'Я начала я с одного курса, а сегодня у меня их уже четыре. Создание онлайн курса может занимать разное время. Например, курс для учителей я создавала несколько недель. А размещение курса на платформе занимает очень мало времени. Очень здорово, что платформа создает вам качественную лендинговую страницу для вашего курса, это очень важный момент для продвижения. И конечно же, функция приема платежей — это тоже один из ключевых моментов, почему я выбрала эту платформу. Удобство оплаты для пользователей — второй ключевой момент продвижения вашего курса, и здесь это заработало классно!'
-      },
-      {
-        avatar: require('../assets/img/course/reviews1.svg'),
-        name: 'Оксана Гаева',
-        description: 'АВТОРИЗОВАННЫЙ ПРЕДСТАВИТЕЛЬ В РОССИИ LETTERLAND INTERNATIONAL',
-        text: 'Я начала я с одного курса, а сегодня у меня их уже четыре. Создание онлайн курса может занимать разное время. Например, курс для учителей я создавала несколько недель. А размещение курса на платформе занимает очень мало времени. Очень здорово, что платформа создает вам качественную лендинговую страницу для вашего курса, это очень важный момент для продвижения. И конечно же, функция приема платежей — это тоже один из ключевых моментов, почему я выбрала эту платформу. Удобство оплаты для пользователей — второй ключевой момент продвижения вашего курса, и здесь это заработало классно!'
-      },
-      {
-        avatar: require('../assets/img/course/reviews1.svg'),
-        name: 'Оксана Гаева',
-        description: 'АВТОРИЗОВАННЫЙ ПРЕДСТАВИТЕЛЬ В РОССИИ LETTERLAND INTERNATIONAL',
-        text: 'Я начала я с одного курса, а сегодня у меня их уже четыре. Создание онлайн курса может занимать разное время. Например, курс для учителей я создавала несколько недель. А размещение курса на платформе занимает очень мало времени. Очень здорово, что платформа создает вам качественную лендинговую страницу для вашего курса, это очень важный момент для продвижения. И конечно же, функция приема платежей — это тоже один из ключевых моментов, почему я выбрала эту платформу. Удобство оплаты для пользователей — второй ключевой момент продвижения вашего курса, и здесь это заработало классно!'
-      }
-    ],
-    tariffs: [
-      {
-        title: 'Тариф номер один',
-        price: 'Бесплатно',
-        btn: 'Выбрать тариф',
-        promo: false,
-        options: ['Без ограничений по числу курсов и учеников','Свой домен школы (при оплате за год)','Подключение приёма платежей с комиссией 10%',]
-      },
-      {
-        title: 'Тариф номер два',
-        price: 'от 19 999 ₽',
-        btn: 'Оплатить 19 999 ₽',
-        promo: false,
-        options: ['Без ограничений по числу курсов и учеников','Свой домен школы (при оплате за год)','Подключение приёма платежей с комиссией 6%','Техподдержка по почте','Интеграция с любой системой приема платежей',]
-      },
-      {
-        title: 'Третий тариф',
-        price: '199 999 ₽',
-        btn: 'Оплатить 199 999 ₽',
-        promo: false,
-        options: ['Без ограничений по числу курсов и учеников','Свой домен школы (при оплате за год)','Подключение приёма платежей с комиссией 1%','Техподдержка по почте','Интеграция с любой системой приема платежей','Отсутствие бренда Learme в дизайне интерфейса',]
-      }
-    ],
-    reviewsMob: [],
-    reviewsDesc: [],
-    heightDesk: 0,
-    heightMob: 0,
-    isPromocode: false,
-    windowWidth: window.innerWidth,
-    textVision: false,
-    activeSlide: 0
-
-  }),
-  created() {
-    this.reviewsMob = this.reviews
-    this.reviewsDesc = this.reviews.map((_, i, a) => a.slice(i * 3, i * 3 + 3)).filter((el) => el.length)
-  },
-  mounted() {
-    setTimeout(() => {
-      this.heightDesk = (this.$refs.heightDesk.$children[0].$el.childNodes[1].clientHeight + 50)
-      this.heightMob = (this.$refs.heightMob.$children[0].$el.childNodes[1].clientHeight + 50)
-    }, 50);
-    window.onresize = () => {
-      this.heightDesk = (this.$refs.heightDesk.$children[0].$el.childNodes[1].clientHeight + 50)
-      this.heightMob = (this.$refs.heightMob.$children[0].$el.childNodes[1].clientHeight + 50)
-    }
-  },
-  methods: {
-    onSwipeLeft() {
-      this.$refs.heightMob.next()
+    data: () => ({
+      vebLogo: require('../assets/img/vebinar/vebinar-logo.svg'),
+      chatQuestion: require('../assets/img/social/telegram-chat-question.svg'),
+      spicer: require('../assets/img/vebinar/spicer.svg'),
+      banner: require('../assets/img/course/banner-top.svg'),
+      lesson: require('../assets/img/course/lesson.svg'),
+      parts: [
+        'Часть 1 Подготовка проекта',
+        'Часть 2 Планирование цикла',
+        'Часть 3 Планирование цикла'
+      ],
+      reviews: [{
+          avatar: require('../assets/img/course/reviews1.svg'),
+          name: 'Оксана Гаева',
+          description: 'АВТОРИЗОВАННЫЙ ПРЕДСТАВИТЕЛЬ В РОССИИ LETTERLAND INTERNATIONAL',
+          text: 'Я начала я с одного курса, а сегодня у меня их уже четыре. Создание онлайн курса может занимать разное время. Например, курс для учителей я создавала несколько недель. А размещение курса на платформе занимает очень мало времени. Очень здорово, что платформа создает вам качественную лендинговую страницу для вашего курса, это очень важный момент для продвижения. И конечно же, функция приема платежей — это тоже один из ключевых моментов, почему я выбрала эту платформу. Удобство оплаты для пользователей — второй ключевой момент продвижения вашего курса, и здесь это заработало классно!'
+        },
+        {
+          avatar: require('../assets/img/course/reviews1.svg'),
+          name: 'Оксана Гаева',
+          description: 'АВТОРИЗОВАННЫЙ ПРЕДСТАВИТЕЛЬ В РОССИИ LETTERLAND INTERNATIONAL',
+          text: 'Я начала я с одного курса, а сегодня у меня их уже четыре. Создание онлайн курса может занимать разное время. Например, курс для учителей я создавала несколько недель. А размещение курса на платформе занимает очень мало времени. Очень здорово, что платформа создает вам качественную лендинговую страницу для вашего курса, это очень важный момент для продвижения. И конечно же, функция приема платежей — это тоже один из ключевых моментов, почему я выбрала эту платформу. Удобство оплаты для пользователей — второй ключевой момент продвижения вашего курса, и здесь это заработало классно!'
+        },
+        {
+          avatar: require('../assets/img/course/reviews1.svg'),
+          name: 'Оксана Гаева',
+          description: 'АВТОРИЗОВАННЫЙ ПРЕДСТАВИТЕЛЬ В РОССИИ LETTERLAND INTERNATIONAL',
+          text: 'Я начала я с одного курса, а сегодня у меня их уже четыре. Создание онлайн курса может занимать разное время. Например, курс для учителей я создавала несколько недель. А размещение курса на платформе занимает очень мало времени. Очень здорово, что платформа создает вам качественную лендинговую страницу для вашего курса, это очень важный момент для продвижения. И конечно же, функция приема платежей — это тоже один из ключевых моментов, почему я выбрала эту платформу. Удобство оплаты для пользователей — второй ключевой момент продвижения вашего курса, и здесь это заработало классно!'
+        },
+        {
+          avatar: require('../assets/img/course/reviews1.svg'),
+          name: 'Оксана Гаева',
+          description: 'АВТОРИЗОВАННЫЙ ПРЕДСТАВИТЕЛЬ В РОССИИ LETTERLAND INTERNATIONAL',
+          text: 'Я начала я с одного курса, а сегодня у меня их уже четыре. Создание онлайн курса может занимать разное время. Например, курс для учителей я создавала несколько недель. А размещение курса на платформе занимает очень мало времени. Очень здорово, что платформа создает вам качественную лендинговую страницу для вашего курса, это очень важный момент для продвижения. И конечно же, функция приема платежей — это тоже один из ключевых моментов, почему я выбрала эту платформу. Удобство оплаты для пользователей — второй ключевой момент продвижения вашего курса, и здесь это заработало классно!'
+        }
+      ],
+      tariffs: [{
+          title: 'Тариф номер один',
+          price: 'Бесплатно',
+          btn: 'Выбрать тариф',
+          promo: false,
+          options: ['Без ограничений по числу курсов и учеников', 'Свой домен школы (при оплате за год)', 'Подключение приёма платежей с комиссией 10%', ]
+        },
+        {
+          title: 'Тариф номер два',
+          price: 'от 19 999 ₽',
+          btn: 'Оплатить 19 999 ₽',
+          promo: false,
+          options: ['Без ограничений по числу курсов и учеников', 'Свой домен школы (при оплате за год)', 'Подключение приёма платежей с комиссией 6%', 'Техподдержка по почте', 'Интеграция с любой системой приема платежей', ]
+        },
+        {
+          title: 'Третий тариф',
+          price: '199 999 ₽',
+          btn: 'Оплатить 199 999 ₽',
+          promo: false,
+          options: ['Без ограничений по числу курсов и учеников', 'Свой домен школы (при оплате за год)', 'Подключение приёма платежей с комиссией 1%', 'Техподдержка по почте', 'Интеграция с любой системой приема платежей', 'Отсутствие бренда Learme в дизайне интерфейса', ]
+        }
+      ],
+      reviewsDesc: [],
+      heightDesk: 0,
+      heightMob: 0,
+      isPromocode: false,
+      windowWidth: window.innerWidth,
+      activeSlide: 0
+    }),
+    created() {
+      this.reviewsDesc = this.reviews.map((_, i, a) => a.slice(i * 3, i * 3 + 3)).filter((el) => el.length)
     },
-    onSwipeRight() {
-      this.$refs.heightMob.prev()
+    mounted() {
+      setTimeout(() => {
+        this.heightDesk = (this.$refs.heightDesk.$children[0].$el.childNodes[1].clientHeight + 50)
+        this.heightMob = (this.$refs.heightMob.$children[0].$el.childNodes[1].clientHeight + 50)
+      }, 50);
+      window.onresize = () => {
+        this.heightDesk = (this.$refs.heightDesk.$children[0].$el.childNodes[1].clientHeight + 50)
+        this.heightMob = (this.$refs.heightMob.$children[0].$el.childNodes[1].clientHeight + 50)
+      }
+    },
+    methods: {
+      onSwipeLeft() {
+        this.$refs.heightMob.next()
+      },
+      onSwipeRight() {
+        this.$refs.heightMob.prev()
+      }
     }
   }
-}
 </script>
 
 <style>
-.el-carousel__container {
-  height: 95%;
-}
-.el-carousel__arrow--right, .el-carousel__arrow--left {
-  background-color: transparent;
-  width: 60px;
-  height: 60px;
-}
-.el-carousel__arrow--right i, .el-carousel__arrow--left i {
-  font-size: 3rem;
-}
-.el-carousel__button {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-}
-.el-button--primary.is-plain {
-  background: #ffffff;
-}
-.custom-accordion .el-collapse-item__arrow {
-  display:none;
-}
-.custom-accardion__arrow {
-  transition: transform .3s,-webkit-transform .3s;
-}
-.custom-accordion .is-active {
-  color:  #1A80E6;
-}
-.custom-accordion .is-active .custom-accardion__arrow {
-  transform: rotate(180deg);
-}
-.custom-accordion .is-active .custom-accardion__arrow path {
-  stroke: #1A80E6;
-}
+  .el-carousel__container {
+    height: 95%;
+  }
+  .el-carousel__arrow--right,
+  .el-carousel__arrow--left {
+    background-color: transparent;
+    width: 60px;
+    height: 60px;
+  }
+  .el-carousel__arrow--right i,
+  .el-carousel__arrow--left i {
+    font-size: 3rem;
+  }
+  .el-carousel__button {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+  .el-button--primary.is-plain {
+    background: #ffffff;
+  }
+  .custom-accordion .el-collapse-item__arrow {
+    display: none;
+  }
+  .custom-accardion__arrow {
+    transition: transform .3s, -webkit-transform .3s;
+  }
+  .custom-accordion .is-active {
+    color: #1A80E6;
+  }
+  .custom-accordion .is-active .custom-accardion__arrow {
+    transform: rotate(180deg);
+  }
+  .custom-accordion .is-active .custom-accardion__arrow path {
+    stroke: #1A80E6;
+  }
   @media (min-width: 1200px) {
     .pay-question {
-        text-align: right;
+      text-align: right;
     }
     .subheader-img {
       padding: 0 135px;
@@ -438,31 +416,27 @@ export default {
     .footer-btn-send {
       justify-content: flex-start;
     }
-    .footer-btn-send > button {
+    .footer-btn-send>button {
       width: 25%;
     }
     .md-flex {
-        display: flex;
+      display: flex;
     }
     .column-lg {
       flex-direction: column;
     }
   }
   @media (min-width: 768px) and (max-width: 1199px) {
-    /* .carousel-mob-tab .el-carousel__container {
-      height: 485px;
-    } */
     .pay-question {
-        text-align: right;
+      text-align: right;
     }
     .carousel-card-wrapper {
-      padding-top:60px; 
-      padding-left: 117px; 
+      padding-top: 60px;
+      padding-left: 117px;
       padding-right: 117px;
     }
     .carousel-card-avatar {
       margin-top: -60px;
-      /* padding-left: 32px; */
     }
     .subheader-img {
       padding: 0 24px;
@@ -479,7 +453,7 @@ export default {
     .footer-btn-send {
       justify-content: center;
     }
-    .footer-btn-send > button {
+    .footer-btn-send>button {
       width: 50%;
     }
     .product-img {
@@ -491,13 +465,10 @@ export default {
       display: none;
     }
     .pay-question {
-        text-align: left;
+      text-align: left;
     }
-    /* .carousel-mob-tab .el-carousel__container {
-      height: 655px;
-    } */
     .carousel-card-wrapper {
-      padding-top:47px;
+      padding-top: 47px;
     }
     .carousel-card-avatar {
       margin-top: -47px;
@@ -516,24 +487,24 @@ export default {
     .footer-btn-send {
       justify-content: center;
     }
-    .footer-btn-send > button {
+    .footer-btn-send>button {
       width: 100%;
     }
     .product-img {
       width: 68px;
     }
     .pay-imgs {
-        width: 24px;
+      width: 24px;
     }
     .text-pay {
-        text-align: justify;
-        -webkit-mask-image: -webkit-linear-gradient(270deg, #000000 51.4%, rgba(0, 0, 0, 0) 100%);
-        height: 131px;
-        overflow: hidden;
+      text-align: justify;
+      -webkit-mask-image: -webkit-linear-gradient(270deg, #000000 51.4%, rgba(0, 0, 0, 0) 100%);
+      height: 131px;
+      overflow: hidden;
     }
     .text-vision {
-        text-align: justify;
-        height: auto !important;
+      text-align: justify;
+      height: auto !important;
     }
   }
 </style>
