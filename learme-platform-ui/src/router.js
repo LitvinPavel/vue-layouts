@@ -95,11 +95,18 @@ export default new Router({
             component: () =>
                 import ('./layouts/layout_author_new.vue'),
             children: [{
-                path: 'account',
-                name: 'account',
-                component: () =>
-                    import ('./components/Account.vue')
-            }, ]
+                    path: 'account',
+                    name: 'account',
+                    component: () =>
+                        import ('./components/Account.vue')
+                },
+                {
+                    path: 'index-page',
+                    name: 'index-page',
+                    component: () =>
+                        import ('./components/IndexPage.vue')
+                },
+            ]
         }
     ]
 })

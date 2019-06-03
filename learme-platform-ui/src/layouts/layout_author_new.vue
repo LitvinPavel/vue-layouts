@@ -6,7 +6,7 @@
         <el-menu 
           default-active="2" 
           class="el-menu-vertical-demo" 
-          style="width: 100%; right: 0; position: absolute; bottom: 0; top: 0;"
+          style="width: 100%; right: 0; min-height: 100%; position: absolute; top: 0;"
         >
           <el-row class="px2 pt2">
             <el-row type="flex">
@@ -67,7 +67,7 @@
         <div 
           v-if="showMenu"
           @click.self="showMenu = !showMenu"
-          style="position: absolute; top: 0; bottom: 0; left: 0; right: 0; background: rgba(21,21,21,.5); z-index: 2;"
+          style="position: fixed; top: 0; height: 100%; left: 0; right: 0; background: rgba(21,21,21,.5); z-index: 2;"
         ></div>
       </transition>
       <Header @isMenu="toggleMenu"></Header>
@@ -97,9 +97,9 @@
 
 <style>
   .mobile-menu {
-    position: absolute;
+    position: fixed;
     right: 0;
-    height: 100vh;
+    min-height: 100%;
     z-index: 9999;
   }
   .slide-fade-enter-active {

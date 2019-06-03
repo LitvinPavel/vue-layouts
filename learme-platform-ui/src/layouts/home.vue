@@ -60,6 +60,11 @@
       <el-button size="mini">Account</el-button>
     </router-link>
   </el-col>
+  <el-col>
+    <router-link to="/author/index-page">
+      <el-button size="mini">Index Page</el-button>
+    </router-link>
+  </el-col>
   
 </el-row>
   </el-main>
