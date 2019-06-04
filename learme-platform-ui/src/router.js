@@ -106,6 +106,24 @@ export default new Router({
                     component: () =>
                         import ('./components/IndexPage.vue')
                 },
+                {
+                  path: 'news',
+                  name: 'news',
+                  component: () =>
+                      import ('./components/News.vue')
+                },
+                {
+                  path: 'settings',
+                  name: 'settings',
+                  component: () =>
+                      import ('./components/Settings.vue')
+                },
+                {
+                  path: 'lesson-page',
+                  name: 'lesson-page',
+                  component: () =>
+                      import ('./components/LessonPage.vue')
+                },
             ]
         }
     ]

@@ -65,7 +65,21 @@
       <el-button size="mini">Index Page</el-button>
     </router-link>
   </el-col>
-  
+  <el-col>
+    <router-link to="/author/news">
+      <el-button size="mini">News</el-button>
+    </router-link>
+  </el-col>
+  <el-col>
+    <router-link to="/author/settings">
+      <el-button size="mini">Settings</el-button>
+    </router-link>
+  </el-col>
+  <el-col>
+    <router-link to="/author/lesson-page">
+      <el-button size="mini">Lesson Page</el-button>
+    </router-link>
+  </el-col>
 </el-row>
   </el-main>
   <el-footer class="footer" height="auto">
