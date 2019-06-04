@@ -13,6 +13,8 @@ export default {
 
 <style>
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+
   body {
     font-family: 'Open Sans';
     background: #F1F7FD;
@@ -91,6 +93,9 @@ export default {
     color: #FFF;
     background-color: #DF5D39;
     border-color: #DF5D39;
+  }
+  .el-button--primary.is-plain {
+    background: #fff !important;
   }
   @media only screen and (min-width: 320px) {
     h1 {

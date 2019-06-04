@@ -54,7 +54,6 @@ export default {
     .menu-hidden {
       -webkit-mask-image: -webkit-linear-gradient(0deg, #000000 51.4%, rgba(0, 0, 0, 0) 100%);
       width: 100vw;
-      height: 40px;
       display: flex;
       overflow-x: auto;
     }
