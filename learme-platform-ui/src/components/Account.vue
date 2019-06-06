@@ -78,7 +78,7 @@
             <el-row :gutter="10">
               <el-col :span="12">
                 <el-dropdown v-if="course.editBtn.type === 'select'" trigger="click" class="mr1"  style="width: 100%;">
-                  <el-button :disabled="course.editBtn.disabled" plain>
+                  <el-button :disabled="course.editBtn.disabled" plain style="width: 100%;" class="px-xs-0">
                     <i class="hidden-xs-only el-icon-arrow-down el-icon--right"></i>
                     <span>{{course.editBtn.title}}</span>
                   </el-button>
@@ -90,7 +90,7 @@
                   <el-dropdown-item divided>Action 5</el-dropdown-item>
                 </el-dropdown-menu>
               </el-dropdown>
-              <el-button v-else :disabled="course.editBtn.disabled" style="width: 100%;" plain>
+              <el-button v-else :disabled="course.editBtn.disabled" style="width: 100%;" plain class="px-xs-0">
                 {{course.editBtn.title}}
               </el-button>
               </el-col>
@@ -263,7 +263,7 @@ export default {
 }
 
   .tabs-btn {
-    align-items: center;
+    align-items: flex-end; /*либо center*/
   }
   @media (min-width: 1200px) {
     .vebroom-video {

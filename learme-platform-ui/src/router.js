@@ -93,7 +93,7 @@ export default new Router({
         {
             path: '/author',
             component: () =>
-                import ('./layouts/layout_author_new.vue'),
+                import ('./layouts/layout_author.vue'),
             children: [{
                     path: 'account',
                     name: 'account',

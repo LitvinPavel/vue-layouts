@@ -1,5 +1,5 @@
 <template>
-    <el-row class="header-wrapper" type="flex" justify="space-between">
+    <el-row type="flex" justify="space-between">
       <img  :src="require('../assets/logo.svg')" alt="logo">
       <el-dropdown>
   <div class="d-flex align-center">
@@ -44,9 +44,3 @@
     })
   }
 </script>
-
-<style>
-.header-wrapper {
-    padding: 23px 0;
-  }
-</style>

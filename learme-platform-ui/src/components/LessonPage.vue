@@ -35,8 +35,8 @@
         <el-row class :gutter="20">
           <el-col :md="5" :xs="24">
             <div class="pt-lg-3 lesson-menu-wrapp">
-              <div class="h4 text-black pl3 headline-menu">Меню курса</div>
-              <SideBarMenu></SideBarMenu>
+              <div class="h4 text-black headline-menu pl-lg-20">Меню курса</div>
+              <SideBarMenu class="pl-lg-20"></SideBarMenu>
               <div class="divider mt1"></div>
               <el-row>
                 <el-col :lg="24" :sm="12" :xs="24">
@@ -46,14 +46,14 @@
                     text-color="#151515"
                     active-text-color="#1A80E6"
                   >
-                    <el-menu-item index="1" class="mr-md-2">
+                    <el-menu-item index="1" class="mr-md-2 pl-lg-20">
                       <span class="el-icon-new-progress"></span>
                       <span class="h5">Материалы</span>
                     </el-menu-item>
                   </el-menu>
                 </el-col>
                 <el-col :lg="24" :sm="12" :xs="24">
-                  <el-row type="flex" class="progress pb-lg-3 px-lg-3 p1">
+                  <el-row type="flex" class="progress pb-lg-3 px-lg-3 py1">
                     <el-col :lg="24" style="display: flex; align-items: flex-end;">
                       <div class="small-text">Ваш прогресс</div>
                     </el-col>
@@ -306,6 +306,9 @@ export default {
 </script>
 
 <style>
+.pl-lg-20 {
+  padding-left: 20px;
+}
 .list-enter-active,
 .list-leave-active {
   transition: all 0.5s;
@@ -350,6 +353,9 @@ export default {
   background: #f1f7fd;
 }
 @media (max-width: 992px) {
+  .pl-lg-20 {
+    padding-left: 0 !important;
+  }
   .progress {
     flex-direction: row;
   }

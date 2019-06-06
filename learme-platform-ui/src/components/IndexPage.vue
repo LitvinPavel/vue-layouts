@@ -7,10 +7,10 @@
       <el-row class="container">
         <el-col :span="24">
           <el-row class="hidden-xs-only">
-            <el-col :lg="4" :md="6" :sm="6" class="mb-md-3">
-              <img class="vebinar-img" :src="require('../assets/img/vebinar/vebinar-logo.svg')" alt="vebinar-logo">
+            <el-col :lg="5" :md="6" :sm="6" class="mb-md-3">
+              <img class="index-page-img" :src="require('../assets/img/vebinar/vebinar-logo.svg')" alt="vebinar-logo">
             </el-col>
-            <el-col :lg="20" :md="18" :sm="18" :xs="17" class="mb-md-3 text-black">
+            <el-col :lg="19" :md="18" :sm="18" :xs="17" class="mb-md-3 text-black">
               <div class="small-text text-gray pb1 hidden-xs-only pb1" style="text-transform: uppercase;letter-spacing: 0.1em;">Практический курс</div>
               <div class="h1 text-black hidden-xs-only pb1">Практический курс по хорошему email-маркетингу</div>
               <div class="body-text text-black hidden-sm-and-down">Краткое описание с полезным действием вебинара с красивым названием в одну или несколько строк</div>
@@ -27,7 +27,7 @@
       <el-row class="container">
         <el-row class="column-reverse" :gutter="20">
           <el-col :md="4" :xs="24">
-            <div class="h4 text-black pt5 mt3 pl3 headline-menu">Меню курса</div>
+            <div class="h4 text-black pt5 mt3 headline-menu">Меню курса</div>
             <SideBarMenu></SideBarMenu>
           </el-col>
           <el-col :md="14" :xs="24">
@@ -197,7 +197,7 @@
 </script>
 
 <style>
-  .vebinar-img {
+  .index-page-img {
     width: 170px;
   }
   .announce-img {
@@ -223,7 +223,7 @@
     padding-top: 24px;
   }
   @media (max-width: 992px) {
-    .vebinar-img {
+    .index-page-img {
       width: 162px;
     }
     .column-reverse {

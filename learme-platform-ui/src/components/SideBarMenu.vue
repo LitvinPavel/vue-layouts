@@ -7,23 +7,23 @@
             text-color="#151515"
       active-text-color="#1A80E6"
       class="menu-hidden side-bar-menu">
-      <el-menu-item index="1" class="mr-md-2">
+      <el-menu-item index="1" class="pr-lg-0" style="padding-left: 0;">
         <span class="el-icon-new-plan"></span>
         <span class="h5">Учебный план</span>
       </el-menu-item>
-      <el-menu-item index="2" class="pr-xs-2">
+      <el-menu-item index="2" class="pr-xs-2 pr-lg-0" style="padding-left: 0;">
         <span class="el-icon-new-news"></span>
         <span class="h5">Новости</span>
       </el-menu-item>
-      <el-menu-item index="3" class="pr-xs-2">
+      <el-menu-item index="3" class="pr-xs-2 pr-lg-0" style="padding-left: 0;">
         <span class="el-icon-new-chat"></span>
         <span class="h5">Чат</span>
       </el-menu-item>
-      <el-menu-item index="4" class="pr-xs-2">
+      <el-menu-item index="4" class="pr-xs-2 pr-lg-0" style="padding-left: 0;">
         <span class="el-icon-new-stats"></span>
         <span class="h5">Рейтинг</span>
       </el-menu-item>
-      <el-menu-item index="5" class="pr-xs-2">
+      <el-menu-item index="5" class="pr-xs-2 pr-lg-0" style="padding-left: 0;">
         <span class="el-icon-new-help_dash"></span>
         <span class="h5 text-black">Поддержка</span>
       </el-menu-item>

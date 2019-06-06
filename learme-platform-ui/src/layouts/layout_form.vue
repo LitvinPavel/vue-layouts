@@ -22,6 +22,10 @@ import Header from '../components/Header'
 </script>
 
 <style>
+.header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
   @media (min-width: 320px) {
     .container {
       padding: 32px 0;
